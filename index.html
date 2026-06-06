@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahamla Organics – Premium Organic Powders & Superfoods</title>
+  <meta name="description" content="Discover Ahamla Organics – 100% pure, certified organic powders including moringa, turmeric, ashwagandha, spirulina & more. Free shipping on orders above ₹999." />
+  <meta name="keywords" content="organic powder, moringa powder, turmeric powder, ashwagandha, spirulina, superfoods, Ahamla Organics" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ahamlaorganics.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahamla Organics – Premium Organic Powders" />
+  <meta property="og:description" content="100% pure certified organic powders delivered to your doorstep." />
+  <meta property="og:url" content="https://www.ahamlaorganics.com/" />
+  <meta property="og:image" content="https://www.ahamlaorganics.com/assets/og-home.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ahamla Organics – Premium Organic Powders" />
+  <meta name="twitter:description" content="100% pure certified organic powders." />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ahamla Organics",
+    "url": "https://www.ahamlaorganics.com",
+    "logo": "https://www.ahamlaorganics.com/assets/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9876543210",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://www.instagram.com/ahamlaorganics",
+      "https://www.facebook.com/ahamlaorganics"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --green: #2e7d52;
+      --green-light: #4caf79;
+      --green-dark: #1b5e35;
+      --blue: #1565c0;
+      --blue-light: #1e88e5;
+      --white: #ffffff;
+      --off-white: #f7faf8;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: all .25s ease;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--gray-900); background: var(--white); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: var(--font); }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 50px; font-size: 15px; font-weight: 600; border: 2px solid transparent; transition: var(--transition); }
+    .btn-primary { background: var(--green); color: var(--white); border-color: var(--green); }
+    .btn-primary:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(46,125,82,.3); }
+    .btn-outline { background: transparent; color: var(--green); border-color: var(--green); }
+    .btn-outline:hover { background: var(--green); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--green); }
+    .btn-white:hover { background: var(--off-white); }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+    .badge-green { background: #e8f5ee; color: var(--green); }
+    .badge-blue { background: #e3f0fd; color: var(--blue); }
+    .section-label { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+    .section-title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: var(--gray-900); line-height: 1.2; }
+    .section-subtitle { font-size: 17px; color: var(--gray-600); margin-top: 12px; max-width: 560px; }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .announcement { background: var(--green); color: var(--white); text-align: center; padding: 10px 20px; font-size: 14px; font-weight: 500; }
+    .announcement a { color: var(--white); text-decoration: underline; }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gray-200); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 40px; height: 40px; background: var(--green); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; }
+    .logo-text { font-size: 22px; font-weight: 800; color: var(--green-dark); line-height: 1; }
+    .logo-text span { color: var(--blue); }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { padding: 8px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; color: var(--gray-700); transition: var(--transition); }
+    nav a:hover, nav a.active { color: var(--green); background: #e8f5ee; }
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .icon-btn { width: 42px; height: 42px; border-radius: 10px; border: none; background: var(--gray-100); color: var(--gray-700); display: flex; align-items: center; justify-content: center; font-size: 18px; transition: var(--transition); position: relative; }
+    .icon-btn:hover { background: var(--green); color: var(--white); }
+    .cart-count { position: absolute; top: 6px; right: 6px; width: 16px; height: 16px; background: var(--green); color: white; border-radius: 50%; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .menu-toggle { display: none; }
+
+    /* ===== HERO ===== */
+    .hero { background: linear-gradient(135deg, #e8f5ee 0%, #e3f0fd 50%, #f0f9f4 100%); padding: 80px 0; overflow: hidden; position: relative; }
+    .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(46,125,82,.12) 0%, transparent 70%); border-radius: 50%; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .hero-badge { margin-bottom: 16px; }
+    .hero-title { font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.1; color: var(--gray-900); margin-bottom: 20px; }
+    .hero-title span { color: var(--green); }
+    .hero-desc { font-size: 18px; color: var(--gray-600); margin-bottom: 32px; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+    .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+    .hero-stat strong { display: block; font-size: 26px; font-weight: 800; color: var(--green-dark); }
+    .hero-stat span { font-size: 13px; color: var(--gray-600); }
+    .hero-visual { position: relative; }
+    .hero-card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: var(--shadow-lg); text-align: center; }
+    .hero-product-img { width: 200px; height: 200px; background: linear-gradient(135deg, #c8e6d5, #bbdefb); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 80px; }
+    .hero-product-name { font-size: 20px; font-weight: 700; color: var(--gray-900); }
+    .hero-product-price { font-size: 24px; font-weight: 800; color: var(--green); margin-top: 4px; }
+    .floating-badge { position: absolute; background: var(--white); border-radius: 12px; padding: 10px 16px; box-shadow: var(--shadow); font-size: 13px; font-weight: 600; }
+    .fb-1 { top: 20px; left: -20px; color: var(--green); }
+    .fb-2 { bottom: 40px; right: -10px; color: var(--blue); }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar { background: var(--gray-50); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 20px 0; }
+    .trust-items { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--gray-700); }
+    .trust-icon { font-size: 22px; }
+
+    /* ===== CATEGORIES ===== */
+    .categories { padding: 80px 0; }
+    .categories-header { text-align: center; margin-bottom: 48px; }
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+    .category-card { background: var(--white); border: 2px solid var(--gray-200); border-radius: var(--radius); padding: 28px 16px; text-align: center; transition: var(--transition); cursor: pointer; }
+    .category-card:hover { border-color: var(--green); box-shadow: var(--shadow); transform: translateY(-4px); }
+    .category-icon { font-size: 40px; margin-bottom: 12px; }
+    .category-name { font-size: 15px; font-weight: 700; color: var(--gray-900); }
+    .category-count { font-size: 13px; color: var(--gray-600); margin-top: 4px; }
+
+    /* ===== PRODUCTS ===== */
+    .products { padding: 80px 0; background: var(--off-white); }
+    .products-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+    .product-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); }
+    .product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .product-img { background: linear-gradient(135deg, #d4edda, #cce5ff); height: 220px; display: flex; align-items: center; justify-content: center; font-size: 72px; position: relative; }
+    .product-tag { position: absolute; top: 12px; left: 12px; }
+    .product-wishlist { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; background: rgba(255,255,255,.9); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; cursor: pointer; transition: var(--transition); }
+    .product-wishlist:hover { background: var(--green); color: var(--white); }
+    .product-info { padding: 20px; }
+    .product-category { font-size: 12px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: .5px; }
+    .product-name { font-size: 16px; font-weight: 700; color: var(--gray-900); margin: 6px 0; }
+    .product-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--gray-600); margin-bottom: 12px; }
+    .stars { color: #f59e0b; }
+    .product-footer { display: flex; align-items: center; justify-content: space-between; }
+    .product-price { font-size: 20px; font-weight: 800; color: var(--green-dark); }
+    .product-old-price { font-size: 14px; color: var(--gray-600); text-decoration: line-through; margin-left: 4px; }
+    .add-cart-btn { width: 38px; height: 38px; background: var(--green); border: none; border-radius: 50%; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+    .add-cart-btn:hover { background: var(--green-dark); transform: scale(1.1); }
+
+    /* ===== BANNER ===== */
+    .banner { padding: 60px 0; }
+    .banner-inner { background: linear-gradient(135deg, var(--green-dark) 0%, var(--blue) 100%); border-radius: 24px; padding: 60px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .banner-title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: var(--white); margin-bottom: 12px; }
+    .banner-desc { font-size: 17px; color: rgba(255,255,255,.85); margin-bottom: 28px; }
+    .banner-visual { font-size: 80px; }
+
+    /* ===== BENEFITS ===== */
+    .benefits { padding: 80px 0; }
+    .benefits-header { text-align: center; margin-bottom: 60px; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; }
+    .benefit-card { text-align: center; padding: 32px 24px; border-radius: var(--radius); background: var(--white); border: 2px solid var(--gray-200); transition: var(--transition); }
+    .benefit-card:hover { border-color: var(--green); box-shadow: var(--shadow); }
+    .benefit-icon { width: 64px; height: 64px; background: linear-gradient(135deg, #e8f5ee, #e3f0fd); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 20px; }
+    .benefit-title { font-size: 18px; font-weight: 700; color: var(--gray-900); margin-bottom: 10px; }
+    .benefit-text { font-size: 15px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { padding: 80px 0; background: var(--off-white); }
+    .testimonials-header { text-align: center; margin-bottom: 48px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .testimonial-card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow-sm); border-left: 4px solid var(--green); }
+    .testimonial-stars { color: #f59e0b; font-size: 16px; margin-bottom: 14px; }
+    .testimonial-text { font-size: 15px; color: var(--gray-700); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--blue)); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 16px; }
+    .author-name { font-weight: 700; font-size: 15px; color: var(--gray-900); }
+    .author-title { font-size: 13px; color: var(--gray-600); }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter { padding: 80px 0; }
+    .newsletter-inner { background: linear-gradient(135deg, #e8f5ee 0%, #e3f0fd 100%); border-radius: 24px; padding: 60px; text-align: center; }
+    .newsletter-title { font-size: clamp(28px, 4vw, 38px); font-weight: 800; color: var(--gray-900); margin-bottom: 12px; }
+    .newsletter-desc { font-size: 17px; color: var(--gray-600); margin-bottom: 32px; }
+    .newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+    .newsletter-input { flex: 1; padding: 14px 20px; border-radius: 50px; border: 2px solid var(--gray-200); font-size: 15px; font-family: var(--font); outline: none; transition: var(--transition); }
+    .newsletter-input:focus { border-color: var(--green); }
+    .newsletter-note { font-size: 13px; color: var(--gray-600); margin-top: 12px; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--gray-900); color: var(--white); }
+    .footer-top { padding: 60px 0; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+    .footer-brand .logo-text { color: var(--white); margin-bottom: 16px; display: block; font-size: 24px; }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.7; margin-bottom: 24px; }
+    .social-links { display: flex; gap: 12px; }
+    .social-btn { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: 16px; transition: var(--transition); }
+    .social-btn:hover { background: var(--green); }
+    .footer-col h4 { font-size: 15px; font-weight: 700; margin-bottom: 20px; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,.65); transition: var(--transition); }
+    .footer-col ul li a:hover { color: var(--green-light); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 14px; color: rgba(255,255,255,.5); }
+    .payment-icons { display: flex; gap: 8px; font-size: 13px; color: rgba(255,255,255,.5); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .menu-toggle { display: flex; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .banner-inner { grid-template-columns: 1fr; padding: 40px; }
+      .banner-visual { display: none; }
+      .newsletter-form { flex-direction: column; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 48px 0; }
+      .categories { padding: 48px 0; }
+      .products { padding: 48px 0; }
+      .hero-stats { gap: 20px; }
+    }
+
+    /* ===== MOBILE NAV OVERLAY ===== */
+    .mobile-nav { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 9998; }
+    .mobile-nav.open { display: block; }
+    .mobile-nav-panel { position: fixed; top: 0; right: 0; width: min(320px, 90vw); height: 100%; background: var(--white); padding: 24px; overflow-y: auto; z-index: 9999; box-shadow: -4px 0 32px rgba(0,0,0,.15); }
+    .mobile-nav-panel a { display: block; padding: 14px 0; font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); }
+    .mobile-nav-close { float: right; background: none; border: none; font-size: 24px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement">
+  🌿 Free shipping on orders above ₹999 &nbsp;|&nbsp; Use code <strong>ORGANIC10</strong> for 10% off &nbsp;
+  <a href="shop.html">Shop Now →</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Ahamla<span>Organics</span></div>
+      </a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" title="Search" onclick="document.getElementById('search-overlay').style.display='flex'">🔍</button>
+        <a href="cart.html" class="icon-btn" title="Cart">
+          🛒<span class="cart-count" id="cart-count">0</span>
+        </a>
+        <button class="icon-btn menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open')">☰</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" onclick="this.classList.remove('open')">
+  <div class="mobile-nav-panel" onclick="event.stopPropagation()">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('open')">✕</button>
+    <br/><br/>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="track-order.html">Track Order</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge badge-green">✓ 100% Certified Organic</span></div>
+        <h1 class="hero-title">Pure Nature,<br><span>Powerful Health</span></h1>
+        <p class="hero-desc">Experience the finest organic superfood powders — ethically sourced, cold-processed, and certified pure. Fuel your body with nature's best.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">Shop All Products ↗</a>
+          <a href="about.html" class="btn btn-outline">Our Story</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>50+</strong><span>Products</span></div>
+          <div class="hero-stat"><strong>10k+</strong><span>Happy Customers</span></div>
+          <div class="hero-stat"><strong>100%</strong><span>Organic</span></div>
+          <div class="hero-stat"><strong>4.9★</strong><span>Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-product-img">🌿</div>
+          <div class="hero-product-name">Moringa Leaf Powder</div>
+          <div class="hero-product-price">₹299 <small style="font-size:16px;color:#888;text-decoration:line-through">₹399</small></div>
+          <br>
+          <a href="product.html" class="btn btn-primary" style="width:100%;justify-content:center">Add to Cart</a>
+        </div>
+        <div class="floating-badge fb-1">🌱 No Preservatives</div>
+        <div class="floating-badge fb-2">🔬 Lab Tested</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item"><span class="trust-icon">🚚</span> Free Shipping ₹999+</div>
+      <div class="trust-item"><span class="trust-icon">🔄</span> Easy 7-Day Returns</div>
+      <div class="trust-item"><span class="trust-icon">🌿</span> USDA & FSSAI Certified</div>
+      <div class="trust-item"><span class="trust-icon">🔒</span> Secure Payments</div>
+      <div class="trust-item"><span class="trust-icon">📦</span> Eco-Friendly Packaging</div>
+    </div>
+  </div>
+</div>
+
+<!-- Categories -->
+<section class="categories">
+  <div class="container">
+    <div class="categories-header">
+      <div class="section-label">Browse by Category</div>
+      <h2 class="section-title">Shop by Collection</h2>
+      <p class="section-subtitle" style="margin:12px auto 0">Find the perfect organic powder for your health goals and lifestyle.</p>
+    </div>
+    <div class="categories-grid">
+      <a href="shop.html?cat=greens" class="category-card">
+        <div class="category-icon">🥬</div>
+        <div class="category-name">Green Powders</div>
+        <div class="category-count">14 Products</div>
+      </a>
+      <a href="shop.html?cat=herbs" class="category-card">
+        <div class="category-icon">🌿</div>
+        <div class="category-name">Herbal Powders</div>
+        <div class="category-count">18 Products</div>
+      </a>
+      <a href="shop.html?cat=roots" class="category-card">
+        <div class="category-icon">🍠</div>
+        <div class="category-name">Root Powders</div>
+        <div class="category-count">11 Products</div>
+      </a>
+      <a href="shop.html?cat=fruit" class="category-card">
+        <div class="category-icon">🍇</div>
+        <div class="category-name">Fruit Powders</div>
+        <div class="category-count">9 Products</div>
+      </a>
+      <a href="shop.html?cat=adaptogens" class="category-card">
+        <div class="category-icon">🧘</div>
+        <div class="category-name">Adaptogens</div>
+        <div class="category-count">8 Products</div>
+      </a>
+      <a href="shop.html?cat=immunity" class="category-card">
+        <div class="category-icon">🛡️</div>
+        <div class="category-name">Immunity Blends</div>
+        <div class="category-count">6 Products</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <div class="section-label">Bestsellers</div>
+        <h2 class="section-title">Featured Products</h2>
+      </div>
+      <a href="shop.html" class="btn btn-outline">View All Products →</a>
+    </div>
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-img">
+          🌿
+          <span class="product-tag"><span class="badge badge-green">Bestseller</span></span>
+          <button class="product-wishlist">♡</button>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Green Powders</div>
+          <div class="product-name">Moringa Leaf Powder (200g)</div>
+          <div class="product-rating"><span class="stars">★★★★★</span> 4.9 (312)</div>
+          <div class="product-footer">
+            <div><span class="product-price">₹299</span><span class="product-old-price">₹399</span></div>
+            <button class="add-cart-btn" onclick="addToCart('Moringa Leaf Powder', 299)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-img" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">
+          🌾
+          <span class="product-tag"><span class="badge badge-blue">New</span></span>
+          <button class="product-wishlist">♡</button>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Root Powders</div>
+          <div class="product-name">Turmeric Root Powder (250g)</div>
+          <div class="product-rating"><span class="stars">★★★★★</span> 4.8 (198)</div>
+          <div class="product-footer">
+            <div><span class="product-price">₹249</span><span class="product-old-price">₹349</span></div>
+            <button class="add-cart-btn" onclick="addToCart('Turmeric Root Powder', 249)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">
+          🍃
+          <button class="product-wishlist">♡</button>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Adaptogens</div>
+          <div class="product-name">Ashwagandha Root Powder (150g)</div>
+          <div class="product-rating"><span class="stars">★★★★☆</span> 4.7 (245)</div>
+          <div class="product-footer">
+            <div><span class="product-price">₹349</span><span class="product-old-price">₹449</span></div>
+            <button class="add-cart-btn" onclick="addToCart('Ashwagandha Root Powder', 349)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-img" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2);">
+          🌊
+          <span class="product-tag"><span class="badge badge-green">Sale</span></span>
+          <button class="product-wishlist">♡</button>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Green Powders</div>
+          <div class="product-name">Spirulina Powder (100g)</div>
+          <div class="product-rating"><span class="stars">★★★★★</span> 4.9 (167)</div>
+          <div class="product-footer">
+            <div><span class="product-price">₹449</span><span class="product-old-price">₹599</span></div>
+            <button class="add-cart-btn" onclick="addToCart('Spirulina Powder', 449)">+</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Promo Banner -->
+<section class="banner">
+  <div class="container">
+    <div class="banner-inner">
+      <div>
+        <h2 class="banner-title">Get 20% Off Your First Order</h2>
+        <p class="banner-desc">Join thousands of health-conscious customers. Use code <strong>AHAMLA20</strong> at checkout.</p>
+        <a href="shop.html" class="btn btn-white">Shop Now →</a>
+      </div>
+      <div class="banner-visual">🎁</div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+  <div class="container">
+    <div class="benefits-header">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">The Ahamla Promise</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🌱</div>
+        <div class="benefit-title">100% Organic Certified</div>
+        <p class="benefit-text">USDA & FSSAI certified. Every product is grown without synthetic pesticides or GMOs.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-title">Third-Party Lab Tested</div>
+        <p class="benefit-text">Every batch is independently tested for purity, potency, and safety. No compromises.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">❄️</div>
+        <div class="benefit-title">Cold-Processed</div>
+        <p class="benefit-text">Our proprietary cold-processing method preserves maximum nutrients and bioavailability.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">♻️</div>
+        <div class="benefit-title">Eco-Friendly Packaging</div>
+        <p class="benefit-text">Fully recyclable, plastic-free packaging. Good for you and the planet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials-header">
+      <div class="section-label">Customer Love</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The moringa powder is absolutely amazing! I've been adding it to my smoothies every morning and my energy levels have skyrocketed. Highly recommend Ahamla Organics!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div><div class="author-name">Priya Sharma</div><div class="author-title">Yoga Instructor, Mumbai</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Best quality ashwagandha I've ever tried. You can tell the difference immediately — no weird smell, just pure goodness. The packaging is also beautiful and eco-friendly!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div><div class="author-name">Rahul Verma</div><div class="author-title">Fitness Coach, Delhi</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Fast delivery, incredible quality, and excellent customer service. Ahamla Organics has become my go-to for all my superfood needs. The turmeric powder is outstanding!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div><div class="author-name">Ananya Krishnan</div><div class="author-title">Nutritionist, Bengaluru</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="section-label" style="text-align:center">Stay Connected</div>
+      <h2 class="newsletter-title">Join the Ahamla Community</h2>
+      <p class="newsletter-desc">Get wellness tips, exclusive offers, and early access to new products.</p>
+      <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" required />
+        <button type="submit" class="btn btn-primary">Subscribe →</button>
+      </form>
+      <p class="newsletter-note">🔒 No spam ever. Unsubscribe anytime. We respect your privacy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-text">🌿 AhamlaOrganics</span>
+        <p>Bringing the purest organic superfoods from farm to your door. Certified, tested, and trusted by thousands of health-conscious families across India.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" title="Instagram">📸</a>
+          <a href="#" class="social-btn" title="Facebook">📘</a>
+          <a href="#" class="social-btn" title="YouTube">▶️</a>
+          <a href="#" class="social-btn" title="Twitter">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="track-order.html">Track Order</a></li>
+          <li><a href="faq.html#returns">Returns & Refunds</a></li>
+          <li><a href="faq.html#shipping">Shipping Info</a></li>
+          <li><a href="faq.html#payment">Payment Help</a></li>
+          <li><a href="contact.html">Help Centre</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="mailto:indiansteelcompanymmr@gmail.com">📧 support@ahamlaorganics.com</a></li>
+          <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+          <li><a href="#">📍 Mumbai, Maharashtra, India</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Ahamla Organics. All rights reserved.</p>
+      <div class="payment-icons">
+        <span>💳 Visa</span><span>💳 Mastercard</span><span>📱 UPI</span><span>💰 COD</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Search Overlay -->
+<div id="search-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:flex-start;justify-content:center;padding-top:100px;" onclick="this.style.display='none'">
+  <div style="background:white;width:min(600px,90vw);border-radius:16px;padding:24px;" onclick="event.stopPropagation()">
+    <input type="search" placeholder="Search organic powders..." style="width:100%;padding:14px 20px;font-size:16px;border:2px solid #e5e7eb;border-radius:12px;outline:none;font-family:inherit;" oninput="searchRedirect(this.value)" />
+    <p style="margin-top:12px;font-size:13px;color:#6b7280;">Try: moringa, turmeric, ashwagandha, spirulina…</p>
+  </div>
+</div>
+
+<script>
+  // Cart Management
+  let cart = JSON.parse(localStorage.getItem('ahamla_cart') || '[]');
+
+  function updateCartCount() {
+    const count = cart.reduce((a, b) => a + b.qty, 0);
+    document.getElementById('cart-count').textContent = count;
+  }
+
+  function addToCart(name, price) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) existing.qty++;
+    else cart.push({ name, price, qty: 1 });
+    localStorage.setItem('ahamla_cart', JSON.stringify(cart));
+    updateCartCount();
+    showToast(`${name} added to cart! 🛒`);
+  }
+
+  function showToast(msg) {
+    const t = document.createElement('div');
+    t.style.cssText = 'position:fixed;bottom:24px;right:24px;background:#2e7d52;color:white;padding:14px 22px;border-radius:12px;font-weight:600;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.2);animation:fadeIn .3s ease';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 3000);
+  }
+
+  function handleNewsletter(e) {
+    e.preventDefault();
+    showToast('🎉 Welcome to Ahamla Organics!');
+    e.target.reset();
+  }
+
+  function searchRedirect(val) {
+    if (val.length > 2) {
+      setTimeout(() => {
+        window.location.href = `shop.html?search=${encodeURIComponent(val)}`;
+      }, 800);
+    }
+  }
+
+  // Wishlist toggle
+  document.querySelectorAll('.product-wishlist').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.textContent = btn.textContent === '♡' ? '♥' : '♡';
+      btn.style.color = btn.textContent === '♥' ? '#e53e3e' : '';
+    });
+  });
+
+  updateCartCount();
+
+  // Add fade-in animation
+  const style = document.createElement('style');
+  style.textContent = '@keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }';
+  document.head.appendChild(style);
+
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'translateY(0)'; } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.product-card, .benefit-card, .testimonial-card, .category-card').forEach(el => {
+    el.style.opacity = 0; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>

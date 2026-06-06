@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Ahamla Organics</title>
+  <meta name="description" content="Get in touch with Ahamla Organics. We're here to help with orders, products, and anything else. Reach us by email, phone, or our contact form." />
+  <meta name="keywords" content="contact Ahamla Organics, organic powder support, customer service India" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ahamlaorganics.com/contact.html" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ContactPage","name":"Contact Ahamla Organics","description":"Contact page for Ahamla Organics customer support"}
+  </script>
+  <style>
+    :root{--green:#2e7d52;--green-light:#4caf79;--green-dark:#1b5e35;--blue:#1565c0;--white:#fff;--off-white:#f7faf8;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-600:#4b5563;--gray-700:#374151;--gray-900:#111827;--red:#c62828;--font:'Segoe UI',system-ui,sans-serif;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow:0 4px 16px rgba(0,0,0,.10);--shadow-lg:0 8px 32px rgba(0,0,0,.14);--radius:12px;--transition:all .25s ease;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font);color:var(--gray-900);background:var(--white);}
+    a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;font-family:var(--font);}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-size:15px;font-weight:700;border:2px solid transparent;transition:var(--transition);}
+    .btn-primary{background:var(--green);color:white;border-color:var(--green);}
+    .btn-primary:hover{background:var(--green-dark);}
+    .section-label{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+    .section-title{font-size:clamp(28px,4vw,40px);font-weight:900;color:var(--gray-900);line-height:1.2;}
+
+    /* HEADER */
+    .announcement{background:var(--green);color:white;text-align:center;padding:10px;font-size:14px;font-weight:500;}
+    .announcement a{color:white;text-decoration:underline;}
+    header{background:white;position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--gray-200);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .logo-icon{width:40px;height:40px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;}
+    .logo-text{font-size:22px;font-weight:800;color:var(--green-dark);}
+    .logo-text span{color:var(--blue);}
+    nav{display:flex;align-items:center;gap:4px;}
+    nav a{padding:8px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--gray-700);transition:var(--transition);}
+    nav a:hover,nav a.active{color:var(--green);background:#e8f5ee;}
+    .header-actions{display:flex;align-items:center;gap:12px;}
+    .icon-btn{width:42px;height:42px;border-radius:10px;border:none;background:var(--gray-100);color:var(--gray-700);display:flex;align-items:center;justify-content:center;font-size:18px;transition:var(--transition);position:relative;}
+    .icon-btn:hover{background:var(--green);color:white;}
+    .cart-count{position:absolute;top:6px;right:6px;width:16px;height:16px;background:var(--green);color:white;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+    .menu-toggle{display:none;}
+
+    /* PAGE HERO */
+    .page-hero{background:linear-gradient(135deg,#e8f5ee,#e3f0fd);padding:60px 0;text-align:center;}
+    .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:900;margin-bottom:16px;}
+    .page-hero p{font-size:17px;color:var(--gray-600);max-width:520px;margin:0 auto;}
+
+    /* QUICK CONTACT CARDS */
+    .quick-contact{padding:60px 0;background:var(--gray-50);}
+    .quick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+    .quick-card{background:white;border-radius:var(--radius);padding:32px 24px;text-align:center;border:2px solid var(--gray-200);transition:var(--transition);}
+    .quick-card:hover{border-color:var(--green);box-shadow:var(--shadow);transform:translateY(-3px);}
+    .quick-icon{font-size:40px;margin-bottom:16px;}
+    .quick-title{font-size:16px;font-weight:800;margin-bottom:6px;}
+    .quick-value{font-size:15px;color:var(--green);font-weight:600;margin-bottom:4px;}
+    .quick-hours{font-size:13px;color:var(--gray-600);}
+
+    /* MAIN LAYOUT */
+    .contact-section{padding:80px 0;}
+    .contact-layout{display:grid;grid-template-columns:1fr 480px;gap:48px;align-items:start;}
+
+    /* FORM */
+    .contact-form-wrap{}
+    .contact-form-wrap h2{font-size:28px;font-weight:800;margin-bottom:8px;}
+    .contact-form-wrap p{font-size:15px;color:var(--gray-600);margin-bottom:32px;}
+    .form-grid{display:grid;gap:20px;}
+    .form-grid-2{grid-template-columns:1fr 1fr;}
+    .form-group{display:flex;flex-direction:column;gap:6px;}
+    label{font-size:13px;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:.4px;}
+    .required{color:var(--red);}
+    input,select,textarea{padding:13px 16px;border:2px solid var(--gray-200);border-radius:10px;font-size:15px;font-family:var(--font);outline:none;transition:var(--transition);background:white;color:var(--gray-900);width:100%;}
+    input:focus,select:focus,textarea:focus{border-color:var(--green);}
+    .subject-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px;}
+    .subject-opt{padding:10px 14px;border:2px solid var(--gray-200);border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;text-align:center;transition:var(--transition);color:var(--gray-700);}
+    .subject-opt.active,.subject-opt:hover{border-color:var(--green);color:var(--green);background:#e8f5ee;}
+    .submit-btn{width:100%;padding:16px;border-radius:50px;border:none;background:var(--green);color:white;font-size:16px;font-weight:800;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;}
+    .submit-btn:hover{background:var(--green-dark);}
+    .form-note{font-size:13px;color:var(--gray-600);text-align:center;margin-top:12px;}
+
+    /* SIDE INFO */
+    .contact-side{}
+    .info-card{background:var(--gray-50);border-radius:var(--radius);padding:28px;margin-bottom:20px;border:1px solid var(--gray-200);}
+    .info-card h3{font-size:16px;font-weight:800;margin-bottom:16px;}
+    .info-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;}
+    .info-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+    .info-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--green);margin-bottom:2px;}
+    .info-value{font-size:15px;color:var(--gray-900);font-weight:500;}
+    .info-sub{font-size:13px;color:var(--gray-600);}
+    .social-links{display:flex;gap:12px;flex-wrap:wrap;}
+    .social-btn{display:flex;align-items:center;gap:8px;padding:10px 16px;background:white;border:2px solid var(--gray-200);border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:var(--transition);color:var(--gray-700);}
+    .social-btn:hover{border-color:var(--green);color:var(--green);}
+    .hours-grid{display:grid;gap:8px;}
+    .hours-row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid var(--gray-100);}
+    .hours-row:last-child{border:none;}
+    .hours-day{color:var(--gray-700);}
+    .hours-time{font-weight:600;color:var(--gray-900);}
+    .hours-time.closed{color:var(--red);}
+
+    /* FAQ HINT */
+    .faq-hint{background:linear-gradient(135deg,#e8f5ee,#e3f0fd);border-radius:var(--radius);padding:24px;text-align:center;border:1px solid var(--gray-200);}
+    .faq-hint h3{font-size:16px;font-weight:800;margin-bottom:8px;}
+    .faq-hint p{font-size:14px;color:var(--gray-600);margin-bottom:16px;}
+
+    /* MAP */
+    .map-section{padding:0 0 80px;}
+    .map-wrap{background:linear-gradient(135deg,#d4edda,#cce5ff);border-radius:24px;height:320px;display:flex;align-items:center;justify-content:center;font-size:60px;position:relative;overflow:hidden;}
+    .map-pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));}
+    .map-label{position:absolute;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);padding:16px 24px;display:flex;align-items:center;gap:12px;}
+    .map-label strong{font-size:15px;}
+    .map-label span{font-size:13px;color:var(--gray-600);}
+
+    /* SUCCESS */
+    .success-banner{display:none;background:#e8f5ee;border:2px solid var(--green);border-radius:var(--radius);padding:20px 24px;text-align:center;margin-bottom:24px;}
+    .success-banner.show{display:block;}
+    .success-banner p{font-size:16px;font-weight:600;color:var(--green-dark);}
+
+    /* FOOTER */
+    footer{background:#111827;color:white;padding:40px 0 24px;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:14px;color:rgba(255,255,255,.5);}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,.5);}
+    .footer-links a:hover{color:#4caf79;}
+
+    /* MOBILE NAV */
+    .mobile-nav{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9998;}
+    .mobile-nav.open{display:block;}
+    .mobile-nav-panel{position:fixed;top:0;right:0;width:min(320px,90vw);height:100%;background:white;padding:24px;overflow-y:auto;z-index:9999;}
+    .mobile-nav-panel a{display:block;padding:14px 0;font-size:16px;font-weight:500;border-bottom:1px solid var(--gray-200);color:var(--gray-700);}
+    .mobile-nav-close{float:right;background:none;border:none;font-size:24px;cursor:pointer;}
+
+    @media(max-width:768px){nav{display:none;}.menu-toggle{display:flex;}.contact-layout{grid-template-columns:1fr;}.form-grid-2{grid-template-columns:1fr;}.subject-options{grid-template-columns:1fr 1fr;}}
+  </style>
+</head>
+<body>
+
+<div class="announcement">🌿 Free shipping on orders above ₹999 &nbsp;|&nbsp; <a href="shop.html">Shop Now →</a></div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Ahamla<span>Organics</span></div>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="cart.html" class="icon-btn">🛒<span class="cart-count" id="cart-count">0</span></a>
+        <button class="icon-btn menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open')">☰</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" onclick="this.classList.remove('open')">
+  <div class="mobile-nav-panel" onclick="event.stopPropagation()">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('open')">✕</button>
+    <br/><br/>
+    <a href="index.html">Home</a><a href="shop.html">Shop</a>
+    <a href="about.html">About</a><a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a><a href="track-order.html">Track Order</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">We're Here to Help</div>
+    <h1>💬 Contact Us</h1>
+    <p>Have a question, feedback, or just want to say hello? Our friendly team is always ready to help you.</p>
+  </div>
+</section>
+
+<!-- QUICK CONTACT -->
+<section class="quick-contact">
+  <div class="container">
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-icon">📧</div>
+        <div class="quick-title">Email Us</div>
+        <div class="quick-value"><a href="mailto:support@ahamlaorganics.com">support@ahamlaorganics.com</a></div>
+        <div class="quick-hours">Reply within 2–4 hours</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon">📞</div>
+        <div class="quick-title">Call Us</div>
+        <div class="quick-value"><a href="tel:+919876543210">+91 98765 43210</a></div>
+        <div class="quick-hours">Mon–Sat, 9 AM – 7 PM IST</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon">💬</div>
+        <div class="quick-title">WhatsApp</div>
+        <div class="quick-value"><a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a></div>
+        <div class="quick-hours">Usually replies in minutes</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon">📍</div>
+        <div class="quick-title">Visit Us</div>
+        <div class="quick-value">Mumbai, Maharashtra</div>
+        <div class="quick-hours">By appointment only</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM + INFO -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <div class="section-label">Send a Message</div>
+        <h2 class="section-title" style="margin-bottom:8px;">We'd Love to Hear From You</h2>
+        <p>Fill in the form below and we'll get back to you within one business day.</p>
+
+        <div class="success-banner" id="success-banner">
+          <p>✅ Message sent successfully! We'll get back to you within 24 hours.</p>
+        </div>
+
+        <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-grid">
+
+            <div>
+              <label style="display:block;margin-bottom:10px;">What can we help you with? <span class="required">*</span></label>
+              <div class="subject-options">
+                <div class="subject-opt active" onclick="selectSubject(this,'Order Issue')">📦 Order Issue</div>
+                <div class="subject-opt" onclick="selectSubject(this,'Product Question')">🌿 Product Question</div>
+                <div class="subject-opt" onclick="selectSubject(this,'Return & Refund')">🔄 Return & Refund</div>
+                <div class="subject-opt" onclick="selectSubject(this,'Wholesale Inquiry')">🤝 Wholesale</div>
+                <div class="subject-opt" onclick="selectSubject(this,'Feedback')">💬 Feedback</div>
+                <div class="subject-opt" onclick="selectSubject(this,'Other')">❓ Other</div>
+              </div>
+              <input type="hidden" id="subject-val" value="Order Issue" />
+            </div>
+
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label>First Name <span class="required">*</span></label>
+                <input type="text" id="fname" placeholder="Priya" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name <span class="required">*</span></label>
+                <input type="text" id="lname" placeholder="Sharma" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" placeholder="+91 98765 43210" />
+            </div>
+
+            <div class="form-group">
+              <label>Order ID <small style="font-weight:400;text-transform:none;letter-spacing:0;">(if order-related)</small></label>
+              <input type="text" id="order-id" placeholder="#AO-123456" />
+            </div>
+
+            <div class="form-group">
+              <label>Message <span class="required">*</span></label>
+              <textarea id="message" rows="5" placeholder="Tell us how we can help you…" required style="resize:vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span id="btn-text">Send Message →</span>
+              <span id="btn-loading" style="display:none">Sending…</span>
+            </button>
+            <p class="form-note">🔒 Your information is safe and will never be shared.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- SIDE INFO -->
+      <div class="contact-side">
+
+        <div class="info-card">
+          <h3>📬 Contact Information</h3>
+          <div class="info-row">
+            <div class="info-icon">📧</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value"><a href="mailto:support@ahamlaorganics.com" style="color:var(--green)">support@ahamlaorganics.com</a></div>
+              <div class="info-sub">For general inquiries</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">📞</div>
+            <div>
+              <div class="info-label">Phone</div>
+              <div class="info-value"><a href="tel:+919876543210" style="color:var(--green)">+91 98765 43210</a></div>
+              <div class="info-sub">Mon–Sat, 9 AM – 7 PM IST</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon">💬</div>
+            <div>
+              <div class="info-label">WhatsApp</div>
+              <div class="info-value"><a href="https://wa.me/919876543210" target="_blank" style="color:var(--green)">+91 98765 43210</a></div>
+              <div class="info-sub">Fastest response channel</div>
+            </div>
+          </div>
+          <div class="info-row" style="margin-bottom:0;">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Address</div>
+              <div class="info-value">Ahamla Organics Pvt. Ltd.</div>
+              <div class="info-sub">Andheri West, Mumbai – 400053<br>Maharashtra, India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>🕐 Business Hours</h3>
+          <div class="hours-grid">
+            <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">9:00 AM – 7:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">10:00 AM – 5:00 PM</span></div>
+            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time closed">Closed</span></div>
+            <div class="hours-row"><span class="hours-day">Public Holidays</span><span class="hours-time closed">Closed</span></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>🌐 Follow Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-btn">📸 Instagram</a>
+            <a href="#" class="social-btn">📘 Facebook</a>
+            <a href="#" class="social-btn">▶️ YouTube</a>
+            <a href="#" class="social-btn">🐦 Twitter</a>
+          </div>
+        </div>
+
+        <div class="faq-hint">
+          <h3>🔍 Quick Answers</h3>
+          <p>Many common questions are already answered in our FAQ section — check it out before writing to us!</p>
+          <a href="faq.html" class="btn btn-primary" style="width:100%;justify-content:center;">Browse FAQs →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <div class="container">
+    <div class="map-wrap">
+      🗺️
+      <div class="map-pin">📍</div>
+      <div class="map-label">
+        <span style="font-size:24px;">🏢</span>
+        <div>
+          <strong>Ahamla Organics Pvt. Ltd.</strong>
+          <span style="display:block;">Andheri West, Mumbai – 400053, Maharashtra, India</span>
+        </div>
+        <a href="https://maps.google.com" target="_blank" style="margin-left:auto;padding:8px 16px;background:var(--green);color:white;border-radius:50px;font-size:13px;font-weight:700;white-space:nowrap;">Open in Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 Ahamla Organics. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="shop.html">Shop</a>
+        <a href="about.html">About</a><a href="faq.html">FAQ</a><a href="track-order.html">Track Order</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem('ahamla_cart') || '[]');
+  document.getElementById('cart-count').textContent = cart.reduce((a,b)=>a+b.qty,0);
+
+  function selectSubject(el, val) {
+    document.querySelectorAll('.subject-opt').forEach(o => o.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('subject-val').value = val;
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const required = ['fname','lname','email','message'];
+    let valid = true;
+    required.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) { el.style.borderColor = '#c62828'; valid = false; }
+      else el.style.borderColor = '';
+    });
+    if (!valid) return;
+    document.getElementById('btn-text').style.display = 'none';
+    document.getElementById('btn-loading').style.display = 'inline';
+    document.querySelector('.submit-btn').disabled = true;
+    setTimeout(() => {
+      document.getElementById('contact-form').reset();
+      document.getElementById('success-banner').classList.add('show');
+      document.getElementById('success-banner').scrollIntoView({behavior:'smooth'});
+      document.getElementById('btn-text').style.display = 'inline';
+      document.getElementById('btn-loading').style.display = 'none';
+      document.querySelector('.submit-btn').disabled = false;
+      document.querySelectorAll('.subject-opt').forEach((o,i) => o.classList.toggle('active', i===0));
+      document.getElementById('subject-val').value = 'Order Issue';
+    }, 1500);
+  }
+
+  document.querySelectorAll('input,textarea').forEach(el => {
+    el.addEventListener('input', () => el.style.borderColor = '');
+  });
+</script>
+</body>
+</html>

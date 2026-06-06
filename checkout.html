@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout – Ahamla Organics</title>
+  <meta name="description" content="Secure checkout for Ahamla Organics. Complete your order safely with multiple payment options." />
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root{--green:#2e7d52;--green-light:#4caf79;--green-dark:#1b5e35;--blue:#1565c0;--white:#fff;--off-white:#f7faf8;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-600:#4b5563;--gray-700:#374151;--gray-900:#111827;--red:#c62828;--font:'Segoe UI',system-ui,sans-serif;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow:0 4px 16px rgba(0,0,0,.10);--shadow-lg:0 8px 32px rgba(0,0,0,.14);--radius:12px;--transition:all .25s ease;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font);color:var(--gray-900);background:var(--gray-50);}
+    a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;font-family:var(--font);}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+
+    /* HEADER */
+    .checkout-header{background:white;border-bottom:1px solid var(--gray-200);padding:0;}
+    .checkout-header-inner{height:64px;display:flex;align-items:center;justify-content:space-between;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .logo-icon{width:36px;height:36px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;}
+    .logo-text{font-size:20px;font-weight:800;color:var(--green-dark);}
+    .logo-text span{color:var(--blue);}
+    .secure-badge{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--gray-600);}
+
+    /* STEPS */
+    .checkout-steps{background:white;border-bottom:1px solid var(--gray-200);padding:16px 0;}
+    .steps{display:flex;align-items:center;justify-content:center;gap:0;}
+    .step{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--gray-600);}
+    .step.active{color:var(--green);}
+    .step.done{color:var(--green-light);}
+    .step-num{width:28px;height:28px;border-radius:50%;border:2px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;}
+    .step.active .step-num{background:var(--green);border-color:var(--green);color:white;}
+    .step.done .step-num{background:var(--green-light);border-color:var(--green-light);color:white;}
+    .step-divider{width:60px;height:2px;background:var(--gray-200);margin:0 12px;}
+    .step-divider.done{background:var(--green-light);}
+
+    /* LAYOUT */
+    .checkout-layout{display:grid;grid-template-columns:1fr 400px;gap:32px;padding:40px 0;}
+
+    /* FORM PANELS */
+    .form-panel{background:white;border-radius:var(--radius);padding:28px;margin-bottom:20px;border:1px solid var(--gray-200);}
+    .panel-title{font-size:18px;font-weight:800;margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+    .panel-icon{font-size:20px;}
+
+    .form-grid{display:grid;gap:16px;}
+    .form-grid-2{grid-template-columns:1fr 1fr;}
+    .form-group{display:flex;flex-direction:column;gap:6px;}
+    label{font-size:13px;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:.4px;}
+    .required{color:var(--red);}
+    input,select,textarea{padding:12px 16px;border:2px solid var(--gray-200);border-radius:10px;font-size:15px;font-family:var(--font);outline:none;transition:var(--transition);background:white;color:var(--gray-900);}
+    input:focus,select:focus,textarea:focus{border-color:var(--green);}
+    input.error,select.error{border-color:var(--red);}
+    .error-msg{font-size:12px;color:var(--red);display:none;}
+    .error-msg.show{display:block;}
+    .input-hint{font-size:12px;color:var(--gray-600);}
+
+    /* SHIPPING OPTIONS */
+    .shipping-options{display:grid;gap:12px;}
+    .shipping-opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:2px solid var(--gray-200);border-radius:10px;cursor:pointer;transition:var(--transition);}
+    .shipping-opt:has(input:checked){border-color:var(--green);background:#e8f5ee;}
+    .shipping-opt input{width:18px;height:18px;accent-color:var(--green);}
+    .shipping-opt-info{flex:1;}
+    .shipping-opt-name{font-weight:700;font-size:15px;}
+    .shipping-opt-desc{font-size:13px;color:var(--gray-600);}
+    .shipping-opt-price{font-weight:800;font-size:15px;color:var(--green-dark);}
+
+    /* PAYMENT OPTIONS */
+    .payment-options{display:grid;gap:12px;}
+    .payment-opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:2px solid var(--gray-200);border-radius:10px;cursor:pointer;transition:var(--transition);}
+    .payment-opt:has(input:checked){border-color:var(--blue);background:#e3f0fd;}
+    .payment-opt input{width:18px;height:18px;accent-color:var(--blue);}
+    .payment-opt-icon{font-size:24px;}
+    .payment-opt-name{font-weight:700;font-size:15px;}
+    .payment-opt-desc{font-size:13px;color:var(--gray-600);}
+    .card-fields{margin-top:16px;display:grid;gap:12px;padding:16px;background:var(--gray-50);border-radius:10px;}
+
+    /* ORDER SUMMARY */
+    .order-summary{background:white;border-radius:var(--radius);padding:24px;border:1px solid var(--gray-200);position:sticky;top:20px;}
+    .order-summary h3{font-size:18px;font-weight:800;margin-bottom:20px;}
+    .order-items{margin-bottom:20px;}
+    .order-item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);}
+    .order-item-img{width:52px;height:52px;background:linear-gradient(135deg,#d4edda,#cce5ff);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+    .order-item-name{flex:1;font-size:14px;font-weight:600;}
+    .order-item-qty{font-size:13px;color:var(--gray-600);}
+    .order-item-price{font-size:15px;font-weight:800;color:var(--green-dark);}
+    .summary-rows{}
+    .summary-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;}
+    .summary-label{color:var(--gray-600);}
+    .summary-value{font-weight:600;}
+    .summary-row.total{font-size:18px;font-weight:900;border-top:2px solid var(--gray-200);padding-top:16px;margin-top:8px;}
+    .place-order-btn{width:100%;padding:16px;border-radius:50px;border:none;background:var(--green);color:white;font-size:17px;font-weight:800;cursor:pointer;transition:var(--transition);margin-top:20px;display:flex;align-items:center;justify-content:center;gap:8px;}
+    .place-order-btn:hover{background:var(--green-dark);}
+    .order-note{font-size:12px;color:var(--gray-600);text-align:center;margin-top:12px;line-height:1.5;}
+    .trust-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--gray-600);}
+
+    /* SUCCESS MODAL */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:20px;}
+    .modal-overlay.show{display:flex;}
+    .modal{background:white;border-radius:24px;padding:48px;text-align:center;max-width:480px;width:100%;box-shadow:var(--shadow-lg);}
+    .modal-icon{font-size:72px;margin-bottom:20px;}
+    .modal-title{font-size:28px;font-weight:900;color:var(--green-dark);margin-bottom:12px;}
+    .modal-desc{font-size:16px;color:var(--gray-600);margin-bottom:28px;line-height:1.6;}
+    .modal-order-id{background:var(--gray-50);border-radius:10px;padding:12px 20px;font-size:14px;margin-bottom:24px;}
+    .modal-order-id strong{color:var(--green);}
+
+    footer{background:#111827;color:white;padding:32px 0;margin-top:0;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:14px;color:rgba(255,255,255,.5);}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,.5);}
+    .footer-links a:hover{color:#4caf79;}
+
+    @media(max-width:768px){
+      .checkout-layout{grid-template-columns:1fr;}
+      .form-grid-2{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="checkout-header">
+  <div class="container">
+    <div class="checkout-header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Ahamla<span>Organics</span></div>
+      </a>
+      <div class="secure-badge">🔒 Secure SSL Checkout</div>
+    </div>
+  </div>
+</div>
+
+<!-- Steps -->
+<div class="checkout-steps">
+  <div class="container">
+    <div class="steps">
+      <div class="step done"><div class="step-num">✓</div><span>Cart</span></div>
+      <div class="step-divider done"></div>
+      <div class="step active"><div class="step-num">2</div><span>Details</span></div>
+      <div class="step-divider"></div>
+      <div class="step"><div class="step-num">3</div><span>Payment</span></div>
+      <div class="step-divider"></div>
+      <div class="step"><div class="step-num">4</div><span>Confirm</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="checkout-layout">
+
+    <!-- LEFT: FORM -->
+    <div>
+      <!-- Contact Info -->
+      <div class="form-panel">
+        <div class="panel-title"><span class="panel-icon">👤</span> Contact Information</div>
+        <div class="form-grid form-grid-2">
+          <div class="form-group">
+            <label>First Name <span class="required">*</span></label>
+            <input type="text" id="fname" placeholder="Priya" required />
+            <span class="error-msg" id="fname-err">Please enter your first name</span>
+          </div>
+          <div class="form-group">
+            <label>Last Name <span class="required">*</span></label>
+            <input type="text" id="lname" placeholder="Sharma" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+            <span class="input-hint">Order confirmation will be sent here</span>
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- Shipping Address -->
+      <div class="form-panel">
+        <div class="panel-title"><span class="panel-icon">📍</span> Shipping Address</div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Street Address <span class="required">*</span></label>
+            <input type="text" id="address" placeholder="House/Flat No., Building, Street" required />
+          </div>
+          <div class="form-group">
+            <label>Apartment / Area</label>
+            <input type="text" id="address2" placeholder="Area, Landmark (optional)" />
+          </div>
+          <div class="form-grid form-grid-2">
+            <div class="form-group">
+              <label>City <span class="required">*</span></label>
+              <input type="text" id="city" placeholder="Mumbai" required />
+            </div>
+            <div class="form-group">
+              <label>State <span class="required">*</span></label>
+              <select id="state" required>
+                <option value="">Select State</option>
+                <option>Maharashtra</option><option>Delhi</option><option>Karnataka</option>
+                <option>Tamil Nadu</option><option>Gujarat</option><option>Rajasthan</option>
+                <option>Uttar Pradesh</option><option>West Bengal</option><option>Telangana</option>
+                <option>Kerala</option><option>Madhya Pradesh</option><option>Punjab</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>PIN Code <span class="required">*</span></label>
+              <input type="text" id="pincode" placeholder="400001" maxlength="6" required />
+            </div>
+            <div class="form-group">
+              <label>Country</label>
+              <select id="country">
+                <option selected>India</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shipping Method -->
+      <div class="form-panel">
+        <div class="panel-title"><span class="panel-icon">🚚</span> Shipping Method</div>
+        <div class="shipping-options">
+          <label class="shipping-opt">
+            <input type="radio" name="shipping" value="standard" checked />
+            <div class="shipping-opt-info">
+              <div class="shipping-opt-name">Standard Delivery</div>
+              <div class="shipping-opt-desc">3–5 business days</div>
+            </div>
+            <div class="shipping-opt-price" id="std-price">₹60</div>
+          </label>
+          <label class="shipping-opt">
+            <input type="radio" name="shipping" value="express" />
+            <div class="shipping-opt-info">
+              <div class="shipping-opt-name">Express Delivery</div>
+              <div class="shipping-opt-desc">1–2 business days</div>
+            </div>
+            <div class="shipping-opt-price">₹120</div>
+          </label>
+          <label class="shipping-opt">
+            <input type="radio" name="shipping" value="overnight" />
+            <div class="shipping-opt-info">
+              <div class="shipping-opt-name">Overnight Delivery</div>
+              <div class="shipping-opt-desc">Next business day</div>
+            </div>
+            <div class="shipping-opt-price">₹200</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Payment -->
+      <div class="form-panel">
+        <div class="panel-title"><span class="panel-icon">💳</span> Payment Method</div>
+        <div class="payment-options">
+
+          <label class="payment-opt">
+            <input type="radio" name="payment" value="card" checked onchange="showPaymentFields('card')" />
+            <span class="payment-opt-icon">💳</span>
+            <div><div class="payment-opt-name">Credit / Debit Card</div><div class="payment-opt-desc">Visa, Mastercard, RuPay</div></div>
+          </label>
+          <div class="card-fields" id="card-fields">
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" id="card-num" placeholder="1234 5678 9012 3456" maxlength="19" oninput="formatCard(this)" />
+            </div>
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label>Expiry Date</label>
+                <input type="text" placeholder="MM / YY" maxlength="7" />
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" placeholder="• • •" maxlength="4" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Cardholder Name</label>
+              <input type="text" placeholder="Name as on card" />
+            </div>
+          </div>
+
+          <label class="payment-opt">
+            <input type="radio" name="payment" value="upi" onchange="showPaymentFields('upi')" />
+            <span class="payment-opt-icon">📱</span>
+            <div><div class="payment-opt-name">UPI Payment</div><div class="payment-opt-desc">PhonePe, Google Pay, Paytm</div></div>
+          </label>
+          <div id="upi-fields" style="display:none;margin-top:8px;padding:16px;background:var(--gray-50);border-radius:10px;">
+            <div class="form-group">
+              <label>UPI ID</label>
+              <input type="text" placeholder="yourname@upi" />
+            </div>
+          </div>
+
+          <label class="payment-opt">
+            <input type="radio" name="payment" value="netbanking" onchange="showPaymentFields('netbanking')" />
+            <span class="payment-opt-icon">🏦</span>
+            <div><div class="payment-opt-name">Net Banking</div><div class="payment-opt-desc">All major banks supported</div></div>
+          </label>
+
+          <label class="payment-opt">
+            <input type="radio" name="payment" value="cod" onchange="showPaymentFields('cod')" />
+            <span class="payment-opt-icon">💰</span>
+            <div><div class="payment-opt-name">Cash on Delivery</div><div class="payment-opt-desc">Pay when your order arrives (₹30 extra)</div></div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Order Note -->
+      <div class="form-panel">
+        <div class="panel-title"><span class="panel-icon">📝</span> Order Notes <small style="font-size:13px;font-weight:400;color:var(--gray-600)">(Optional)</small></div>
+        <textarea rows="3" placeholder="Any special instructions or notes for your order…" style="width:100%;resize:vertical;"></textarea>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: ORDER SUMMARY -->
+    <div>
+      <div class="order-summary">
+        <h3>📦 Order Summary</h3>
+        <div class="order-items" id="order-items">
+          <!-- Cart items rendered here -->
+        </div>
+
+        <div class="summary-rows">
+          <div class="summary-row">
+            <span class="summary-label">Subtotal</span>
+            <span class="summary-value" id="sum-subtotal">₹0</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Shipping</span>
+            <span class="summary-value" id="sum-shipping">₹60</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Tax (GST 5%)</span>
+            <span class="summary-value" id="sum-tax">₹0</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="sum-total">₹0</span>
+          </div>
+        </div>
+
+        <button class="place-order-btn" onclick="placeOrder()">
+          🔒 Place Order Securely
+        </button>
+
+        <p class="order-note">By placing your order, you agree to our <a href="#" style="color:var(--green)">Terms of Service</a> and <a href="#" style="color:var(--green)">Privacy Policy</a>.</p>
+
+        <div class="trust-row">
+          <span>🔒 SSL Secured</span>
+          <span>🔄 7-Day Returns</span>
+          <span>📞 24/7 Support</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal">
+    <div class="modal-icon">🎉</div>
+    <h2 class="modal-title">Order Placed!</h2>
+    <p class="modal-desc">Thank you for your order! We've sent a confirmation to your email. Your organic powders are being prepared for dispatch.</p>
+    <div class="modal-order-id">Order ID: <strong id="modal-order-id">#AO-000000</strong></div>
+    <a href="track-order.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:12px;">Track Your Order →</a>
+    <a href="index.html" style="display:block;text-align:center;color:var(--green);font-weight:600;">← Continue Shopping</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 Ahamla Organics. Secure Checkout.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem('ahamla_cart') || '[]');
+  const emojis = { 'Moringa':'🌿','Turmeric':'🌾','Ashwagandha':'🍃','Spirulina':'🌊','Amla':'🫐','Brahmi':'🌸','Maca':'🍠','Wheatgrass':'🌱','Neem':'🍀','Shatavari':'🌺','Acai':'🍇','Immunity':'🛡️' };
+
+  function getEmoji(name) {
+    for (const [k, v] of Object.entries(emojis)) {
+      if (name.includes(k)) return v;
+    }
+    return '🌿';
+  }
+
+  function renderOrderItems() {
+    const container = document.getElementById('order-items');
+    if (cart.length === 0) {
+      container.innerHTML = '<p style="text-align:center;color:var(--gray-600);font-size:14px;">Your cart is empty. <a href="shop.html" style="color:var(--green)">Shop now</a></p>';
+      return;
+    }
+    const subtotal = cart.reduce((a, b) => a + b.price * b.qty, 0);
+    const shipping = subtotal >= 999 ? 0 : 60;
+    const tax = Math.round(subtotal * 0.05);
+    const total = subtotal + shipping + tax;
+
+    container.innerHTML = cart.map(item => `
+      <div class="order-item">
+        <div class="order-item-img">${getEmoji(item.name)}</div>
+        <div style="flex:1;">
+          <div class="order-item-name">${item.name}</div>
+          <div class="order-item-qty">Qty: ${item.qty} × ₹${item.price}</div>
+        </div>
+        <div class="order-item-price">₹${item.price * item.qty}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('sum-subtotal').textContent = `₹${subtotal}`;
+    document.getElementById('sum-shipping').textContent = shipping === 0 ? 'Free 🎉' : `₹${shipping}`;
+    document.getElementById('sum-tax').textContent = `₹${tax}`;
+    document.getElementById('sum-total').textContent = `₹${total}`;
+  }
+
+  function showPaymentFields(type) {
+    document.getElementById('card-fields').style.display = type === 'card' ? 'grid' : 'none';
+    document.getElementById('upi-fields').style.display = type === 'upi' ? 'block' : 'none';
+  }
+
+  function formatCard(input) {
+    let val = input.value.replace(/\D/g,'').substring(0,16);
+    input.value = val.replace(/(.{4})/g, '$1 ').trim();
+  }
+
+  function validateForm() {
+    const required = ['fname','lname','email','phone','address','city','state','pincode'];
+    let valid = true;
+    required.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) {
+        el.classList.add('error');
+        valid = false;
+      } else {
+        el.classList.remove('error');
+      }
+    });
+    return valid;
+  }
+
+  function placeOrder() {
+    if (!validateForm()) {
+      document.querySelector('.error').scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+    const orderId = '#AO-' + Date.now().toString().slice(-6);
+    document.getElementById('modal-order-id').textContent = orderId;
+    localStorage.removeItem('ahamla_cart');
+    document.getElementById('success-modal').classList.add('show');
+  }
+
+  renderOrderItems();
+
+  // Remove error class on input
+  document.querySelectorAll('input,select').forEach(el => {
+    el.addEventListener('input', () => el.classList.remove('error'));
+  });
+</script>
+
+</body>
+</html>

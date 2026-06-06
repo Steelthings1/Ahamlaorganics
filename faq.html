@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ – Frequently Asked Questions | Ahamla Organics</title>
+  <meta name="description" content="Find answers to the most common questions about Ahamla Organics — shipping, returns, product quality, certifications, payments, and more." />
+  <meta name="keywords" content="Ahamla Organics FAQ, organic powder questions, shipping returns policy, organic certification" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ahamlaorganics.com/faq.html" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are your products truly organic?","acceptedAnswer":{"@type":"Answer","text":"Yes. All Ahamla Organics products are USDA and FSSAI certified organic, grown without synthetic pesticides or GMOs, and independently lab-tested every batch."}},{"@type":"Question","name":"Do you offer free shipping?","acceptedAnswer":{"@type":"Answer","text":"Yes! We offer free standard shipping on all orders above ₹999. Orders below ₹999 incur a flat ₹60 shipping charge."}},{"@type":"Question","name":"What is your return policy?","acceptedAnswer":{"@type":"Answer","text":"We offer hassle-free returns within 7 days of delivery. If you're not satisfied for any reason, contact us and we'll arrange a pickup and full refund."}}]}
+  </script>
+  <style>
+    :root{--green:#2e7d52;--green-light:#4caf79;--green-dark:#1b5e35;--blue:#1565c0;--white:#fff;--off-white:#f7faf8;--gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;--gray-600:#4b5563;--gray-700:#374151;--gray-900:#111827;--font:'Segoe UI',system-ui,sans-serif;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow:0 4px 16px rgba(0,0,0,.10);--shadow-lg:0 8px 32px rgba(0,0,0,.14);--radius:12px;--transition:all .25s ease;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font);color:var(--gray-900);background:var(--white);}
+    a{color:inherit;text-decoration:none;}ul{list-style:none;}button{cursor:pointer;font-family:var(--font);}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-size:15px;font-weight:700;border:2px solid transparent;transition:var(--transition);}
+    .btn-primary{background:var(--green);color:white;border-color:var(--green);}
+    .btn-primary:hover{background:var(--green-dark);}
+    .btn-outline{background:transparent;color:var(--green);border-color:var(--green);}
+    .btn-outline:hover{background:var(--green);color:white;}
+    .section-label{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+    .section-title{font-size:clamp(28px,4vw,40px);font-weight:900;color:var(--gray-900);line-height:1.2;}
+
+    /* HEADER */
+    .announcement{background:var(--green);color:white;text-align:center;padding:10px;font-size:14px;font-weight:500;}
+    .announcement a{color:white;text-decoration:underline;}
+    header{background:white;position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--gray-200);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .logo-icon{width:40px;height:40px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;}
+    .logo-text{font-size:22px;font-weight:800;color:var(--green-dark);}
+    .logo-text span{color:var(--blue);}
+    nav{display:flex;align-items:center;gap:4px;}
+    nav a{padding:8px 14px;border-radius:8px;font-size:15px;font-weight:500;color:var(--gray-700);transition:var(--transition);}
+    nav a:hover,nav a.active{color:var(--green);background:#e8f5ee;}
+    .header-actions{display:flex;align-items:center;gap:12px;}
+    .icon-btn{width:42px;height:42px;border-radius:10px;border:none;background:var(--gray-100);color:var(--gray-700);display:flex;align-items:center;justify-content:center;font-size:18px;transition:var(--transition);position:relative;}
+    .icon-btn:hover{background:var(--green);color:white;}
+    .cart-count{position:absolute;top:6px;right:6px;width:16px;height:16px;background:var(--green);color:white;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+    .menu-toggle{display:none;}
+
+    /* HERO */
+    .page-hero{background:linear-gradient(135deg,#e8f5ee,#e3f0fd);padding:64px 0;text-align:center;}
+    .page-hero h1{font-size:clamp(32px,5vw,48px);font-weight:900;margin-bottom:16px;}
+    .page-hero p{font-size:17px;color:var(--gray-600);max-width:520px;margin:0 auto 28px;}
+    .faq-search{display:flex;gap:12px;max-width:480px;margin:0 auto;}
+    .faq-search input{flex:1;padding:14px 20px;border-radius:50px;border:2px solid var(--gray-200);font-size:15px;font-family:var(--font);outline:none;transition:var(--transition);}
+    .faq-search input:focus{border-color:var(--green);}
+    .faq-search button{padding:14px 24px;border-radius:50px;border:none;background:var(--green);color:white;font-size:15px;font-weight:700;cursor:pointer;}
+
+    /* CATEGORY PILLS */
+    .faq-categories{padding:32px 0;background:var(--gray-50);border-bottom:1px solid var(--gray-200);}
+    .cat-pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+    .cat-pill{padding:10px 22px;border-radius:50px;border:2px solid var(--gray-200);background:white;font-size:14px;font-weight:600;cursor:pointer;transition:var(--transition);color:var(--gray-700);}
+    .cat-pill.active,.cat-pill:hover{border-color:var(--green);color:var(--green);background:#e8f5ee;}
+
+    /* FAQ LAYOUT */
+    .faq-section{padding:72px 0;}
+    .faq-layout{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start;}
+    .faq-nav{position:sticky;top:88px;}
+    .faq-nav-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--gray-600);margin-bottom:12px;}
+    .faq-nav a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;font-size:14px;font-weight:600;color:var(--gray-700);transition:var(--transition);margin-bottom:4px;}
+    .faq-nav a:hover,.faq-nav a.active{background:#e8f5ee;color:var(--green);}
+
+    /* FAQ GROUPS */
+    .faq-group{margin-bottom:56px;}
+    .group-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid var(--gray-200);}
+    .group-icon{font-size:28px;}
+    .group-title{font-size:22px;font-weight:800;color:var(--gray-900);}
+    .group-count{font-size:13px;color:var(--gray-600);background:var(--gray-100);padding:3px 10px;border-radius:50px;font-weight:600;}
+
+    /* ACCORDION */
+    .accordion-item{border:1px solid var(--gray-200);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;transition:var(--transition);}
+    .accordion-item:hover{border-color:var(--green-light);}
+    .accordion-item.open{border-color:var(--green);box-shadow:var(--shadow-sm);}
+    .accordion-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;background:white;border:none;text-align:left;cursor:pointer;transition:var(--transition);}
+    .accordion-btn:hover{background:var(--gray-50);}
+    .accordion-item.open .accordion-btn{background:#e8f5ee;}
+    .accordion-q{font-size:15px;font-weight:700;color:var(--gray-900);line-height:1.4;}
+    .accordion-item.open .accordion-q{color:var(--green-dark);}
+    .accordion-icon{width:28px;height:28px;border-radius:50%;border:2px solid var(--gray-300);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0;transition:var(--transition);color:var(--gray-600);}
+    .accordion-item.open .accordion-icon{background:var(--green);border-color:var(--green);color:white;transform:rotate(45deg);}
+    .accordion-body{display:none;padding:0 20px 20px;background:white;}
+    .accordion-item.open .accordion-body{display:block;}
+    .accordion-body p{font-size:15px;color:var(--gray-700);line-height:1.8;}
+    .accordion-body ul{margin:10px 0 0 20px;}
+    .accordion-body ul li{font-size:15px;color:var(--gray-700);line-height:1.8;list-style:disc;margin-bottom:4px;}
+    .accordion-body a{color:var(--green);font-weight:600;}
+
+    /* NO RESULTS */
+    .no-results{text-align:center;padding:60px 20px;display:none;}
+    .no-results.show{display:block;}
+
+    /* CTA */
+    .faq-cta{background:linear-gradient(135deg,#e8f5ee,#e3f0fd);border-radius:24px;padding:48px;text-align:center;margin-top:40px;}
+    .faq-cta h3{font-size:24px;font-weight:800;margin-bottom:12px;}
+    .faq-cta p{font-size:16px;color:var(--gray-600);margin-bottom:24px;}
+    .faq-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+    /* FOOTER */
+    footer{background:#111827;color:white;padding:40px 0 24px;margin-top:80px;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-bottom p{font-size:14px;color:rgba(255,255,255,.5);}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,.5);}
+    .footer-links a:hover{color:#4caf79;}
+
+    /* MOBILE NAV */
+    .mobile-nav{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9998;}
+    .mobile-nav.open{display:block;}
+    .mobile-nav-panel{position:fixed;top:0;right:0;width:min(320px,90vw);height:100%;background:white;padding:24px;overflow-y:auto;z-index:9999;}
+    .mobile-nav-panel a{display:block;padding:14px 0;font-size:16px;font-weight:500;border-bottom:1px solid var(--gray-200);color:var(--gray-700);}
+    .mobile-nav-close{float:right;background:none;border:none;font-size:24px;cursor:pointer;}
+
+    .highlight{background:#fff3cd;border-radius:3px;padding:0 2px;}
+
+    @media(max-width:768px){nav{display:none;}.menu-toggle{display:flex;}.faq-layout{grid-template-columns:1fr;}.faq-nav{display:none;}}
+  </style>
+</head>
+<body>
+
+<div class="announcement">🌿 Free shipping on orders above ₹999 &nbsp;|&nbsp; <a href="shop.html">Shop Now →</a></div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Ahamla<span>Organics</span></div>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="cart.html" class="icon-btn">🛒<span class="cart-count" id="cart-count">0</span></a>
+        <button class="icon-btn menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open')">☰</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" onclick="this.classList.remove('open')">
+  <div class="mobile-nav-panel" onclick="event.stopPropagation()">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('open')">✕</button>
+    <br/><br/>
+    <a href="index.html">Home</a><a href="shop.html">Shop</a>
+    <a href="about.html">About</a><a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a><a href="track-order.html">Track Order</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label">Help Centre</div>
+    <h1>❓ Frequently Asked Questions</h1>
+    <p>Quick answers to the questions we hear most. Can't find yours? We're just a message away.</p>
+    <div class="faq-search">
+      <input type="search" id="faq-search" placeholder="Search questions…" oninput="searchFAQ(this.value)" />
+      <button onclick="searchFAQ(document.getElementById('faq-search').value)">Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY PILLS -->
+<div class="faq-categories">
+  <div class="container">
+    <div class="cat-pills">
+      <button class="cat-pill active" onclick="filterCat(this,'all')">All Questions</button>
+      <button class="cat-pill" onclick="filterCat(this,'products')">🌿 Products</button>
+      <button class="cat-pill" onclick="filterCat(this,'shipping')">🚚 Shipping</button>
+      <button class="cat-pill" onclick="filterCat(this,'returns')">🔄 Returns</button>
+      <button class="cat-pill" onclick="filterCat(this,'payment')">💳 Payment</button>
+      <button class="cat-pill" onclick="filterCat(this,'orders')">📦 Orders</button>
+      <button class="cat-pill" onclick="filterCat(this,'certifications')">🔬 Certifications</button>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ CONTENT -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-layout">
+
+      <!-- NAV -->
+      <nav class="faq-nav">
+        <div class="faq-nav-title">Jump to Section</div>
+        <a href="#products" onclick="setNavActive(this)" class="active">🌿 Products</a>
+        <a href="#shipping" onclick="setNavActive(this)">🚚 Shipping</a>
+        <a href="#returns" onclick="setNavActive(this)">🔄 Returns</a>
+        <a href="#payment" onclick="setNavActive(this)">💳 Payment</a>
+        <a href="#orders" onclick="setNavActive(this)">📦 Orders</a>
+        <a href="#certifications" onclick="setNavActive(this)">🔬 Certifications</a>
+      </nav>
+
+      <!-- QUESTIONS -->
+      <div id="faq-content">
+
+        <!-- PRODUCTS -->
+        <div class="faq-group" id="products" data-cat="products">
+          <div class="group-header">
+            <span class="group-icon">🌿</span>
+            <span class="group-title">Products</span>
+            <span class="group-count">8 questions</span>
+          </div>
+
+          <div class="accordion-item open">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Are your products truly 100% organic?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Absolutely. Every Ahamla Organics product is certified organic by both USDA and FSSAI — the highest standards in the industry. Our farms use no synthetic pesticides, herbicides, or GMOs. Each batch is independently laboratory tested before it reaches you, and we publish the test certificates on our website for full transparency.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">What is cold processing and why does it matter?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Cold processing means we dry and grind our ingredients at low temperatures (never exceeding 40°C). This is crucial because heat destroys delicate enzymes, vitamins, and phytonutrients. By cold processing, we preserve up to 90% more nutritional value compared to conventional heat-dried powders — giving you a genuinely potent product.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Do your products contain any additives, fillers, or preservatives?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Never. Our powders contain exactly one ingredient — the plant itself. No anti-caking agents, no flow agents, no artificial colours or flavours, no preservatives, and no fillers of any kind. What you see on the label is exactly what's in the bag.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How long do your products last? What is the shelf life?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Our products have a shelf life of 18–24 months from the date of manufacture when stored properly. To maximise freshness:</p>
+              <ul>
+                <li>Store in a cool, dry place away from direct sunlight</li>
+                <li>Keep the bag tightly sealed after each use</li>
+                <li>Use a dry spoon to measure — avoid moisture contamination</li>
+                <li>Refrigeration is not required but can extend life further</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Are your products safe during pregnancy or breastfeeding?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>While most of our products are natural whole foods, we always recommend consulting your healthcare provider before adding any new supplement to your diet during pregnancy or breastfeeding. Some herbs like ashwagandha and moringa have specific considerations. Your doctor is best placed to advise based on your individual situation.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Are your products suitable for children?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Many of our products like moringa, amla, and spirulina are excellent for children in appropriate amounts. Generally, children under 12 can take half the adult serving. However, we recommend consulting a paediatrician before introducing any new superfood to a child's diet, particularly for adaptogenic herbs like ashwagandha.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How should I use the powders? What are the serving sizes?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Each product comes with specific usage directions on the packaging. General guidance:</p>
+              <ul>
+                <li>Start with ½ teaspoon daily and gradually increase to the recommended amount</li>
+                <li>Mix in smoothies, juices, water, milk, yogurt, or any food</li>
+                <li>Best taken in the morning for most green powders</li>
+                <li>Adaptogens like ashwagandha work best taken consistently for 4–8 weeks</li>
+              </ul>
+              <p style="margin-top:10px;">Each product page also has a detailed "How to Use" section with recipe ideas.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Do you offer samples before I buy a full-size product?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes! We offer a <strong>Sample Pack</strong> of 5 bestselling powders (10g each) for just ₹199 including shipping. It's a great way to try before committing to a full-size bag. <a href="shop.html">Browse our Shop</a> and look for "Starter Sample Pack" in the featured products.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHIPPING -->
+        <div class="faq-group" id="shipping" data-cat="shipping">
+          <div class="group-header">
+            <span class="group-icon">🚚</span>
+            <span class="group-title">Shipping & Delivery</span>
+            <span class="group-count">6 questions</span>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Do you offer free shipping?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes! We offer <strong>free standard shipping on all orders above ₹999</strong>. Orders below ₹999 are charged a flat ₹60 shipping fee. Express delivery (1–2 days) is available for ₹120, and overnight delivery for ₹200 regardless of order value.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How long does delivery take?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <ul>
+                <li><strong>Standard Delivery:</strong> 3–5 business days</li>
+                <li><strong>Express Delivery:</strong> 1–2 business days</li>
+                <li><strong>Overnight Delivery:</strong> Next business day</li>
+              </ul>
+              <p style="margin-top:10px;">Orders placed before 2 PM IST on business days are dispatched the same day. Orders placed after 2 PM or on weekends/holidays are dispatched the next business day.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Which states and cities do you deliver to?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We deliver to all major cities and towns across India — all 28 states and 8 union territories. If you're unsure whether we deliver to your PIN code, simply enter it at checkout and we'll confirm availability. We do not currently ship internationally, but international shipping is coming soon!</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How can I track my order?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Once your order is dispatched, you'll receive an email and SMS with your tracking number and a link to track in real time. You can also use our <a href="track-order.html">Track Order page</a> to check the status of your order at any time using your Order ID or registered email address.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">What if my order is delayed?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Delays are rare but can occasionally happen due to weather events, public holidays, or high demand periods. If your order hasn't arrived within the estimated delivery window, please <a href="contact.html">contact our support team</a> with your order ID and we'll investigate immediately. If the delay is on our end, we'll offer you a delivery upgrade or discount on your next order.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Is my package discreet? What does the packaging look like?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>All orders are shipped in plain brown corrugated boxes with no external branding. The only label is the delivery address and our company name "Ahamla Organics." Inside, your products are individually sealed in our eco-friendly, airtight resealable bags with full product labelling.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RETURNS -->
+        <div class="faq-group" id="returns" data-cat="returns">
+          <div class="group-header">
+            <span class="group-icon">🔄</span>
+            <span class="group-title">Returns & Refunds</span>
+            <span class="group-count">5 questions</span>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">What is your return policy?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We offer a <strong>hassle-free 7-day return policy</strong> from the date of delivery. If you're not completely satisfied with your purchase for any reason — quality, taste, or just changed your mind — contact us within 7 days and we'll arrange a free pickup and issue a full refund, no questions asked.</p>
+              <p style="margin-top:8px;">Opened products are also eligible for returns if you are genuinely unsatisfied with the quality.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How do I initiate a return?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Starting a return is simple:</p>
+              <ul>
+                <li>Email us at <a href="mailto:support@ahamlaorganics.com">support@ahamlaorganics.com</a> with your Order ID</li>
+                <li>Or use the <a href="contact.html">Contact Form</a> and select "Return & Refund" as the subject</li>
+                <li>Our team will confirm and schedule a free pickup within 24 hours</li>
+                <li>Once we receive the item, your refund is processed within 3–5 business days</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How long does it take to receive my refund?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Once we receive your returned item and verify its condition, refunds are processed within <strong>3–5 business days</strong>. The amount is credited back to your original payment method. UPI and bank transfers typically reflect within 1–2 business days; card refunds may take 5–7 business days depending on your bank.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">What if I receive a damaged or wrong product?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We're so sorry if this happens! Please take a photo of the damaged/wrong item and email it to us within 48 hours of delivery. We'll send a replacement at no additional cost with priority shipping, or issue a full refund — whichever you prefer. No need to return the damaged item.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Can I exchange a product for a different one?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes! Exchanges are treated as a return + new order. Initiate a return for the original product, and place a new order for the product you'd like instead. If the price difference is in your favour, we'll refund the difference. If you owe extra, we'll send you a payment link for the balance.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="faq-group" id="payment" data-cat="payment">
+          <div class="group-header">
+            <span class="group-icon">💳</span>
+            <span class="group-title">Payment</span>
+            <span class="group-count">5 questions</span>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">What payment methods do you accept?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We accept all major payment methods:</p>
+              <ul>
+                <li>Credit & Debit Cards (Visa, Mastercard, RuPay, Amex)</li>
+                <li>UPI (Google Pay, PhonePe, Paytm, BHIM)</li>
+                <li>Net Banking (all major Indian banks)</li>
+                <li>Cash on Delivery (COD) — available for orders up to ₹5,000</li>
+                <li>EMI options on select cards for orders above ₹3,000</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Is my payment information secure?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Absolutely. Our checkout is secured with 256-bit SSL encryption — the same standard used by major banks. We do not store your card details on our servers. All payment processing is handled by PCI-DSS compliant payment gateways (Razorpay/PayU). Look for the padlock icon in your browser's address bar for confirmation.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Do you offer EMI options?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes! We offer no-cost EMI on orders above ₹3,000 for 3, 6, and 9 month tenures on select credit cards from HDFC, ICICI, SBI, Axis, Kotak, and more. EMI options will appear automatically at checkout if your cart and card are eligible.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">How do I apply a coupon or promo code?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>On the Cart page, you'll find a "Have a coupon code?" section. Enter your code there and click Apply. The discount will be reflected in your order total immediately before checkout. Only one coupon code can be applied per order. Codes are case-insensitive.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Will I receive a GST invoice?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes. A tax invoice with full GST breakup is automatically emailed to you after your order is confirmed. You can also download it anytime from your order confirmation email. If you need an invoice with your company's GSTIN, please mention it in the order notes at checkout or contact us immediately after ordering.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ORDERS -->
+        <div class="faq-group" id="orders" data-cat="orders">
+          <div class="group-header">
+            <span class="group-icon">📦</span>
+            <span class="group-title">Orders</span>
+            <span class="group-count">4 questions</span>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Can I modify or cancel my order after placing it?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>You can cancel or modify your order within <strong>2 hours</strong> of placing it by contacting us immediately via WhatsApp or phone. After 2 hours, orders are usually dispatched and cannot be modified. If it's already shipped, you can initiate a return once delivered.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">I haven't received an order confirmation email. What should I do?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Please check your spam/junk folder first — our emails sometimes land there. If you don't see it after 30 minutes, <a href="contact.html">contact us</a> with the email address you used and we'll resend the confirmation. Make sure to whitelist support@ahamlaorganics.com in your email client.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Do you offer bulk or wholesale pricing?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes! We offer attractive wholesale pricing for retailers, gyms, nutrition centres, hospitals, and corporate wellness programmes for orders of 20+ units per SKU. Please <a href="contact.html">contact us</a> with your requirements and we'll send you our B2B pricing catalogue within 24 hours.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Can I place a subscription order for regular deliveries?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Our subscription service is coming very soon! In the meantime, you can <a href="contact.html">contact us</a> to set up a manual recurring order. We'll give you a <strong>15% discount</strong> on your subscription price and ensure your products arrive before you run out.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="faq-group" id="certifications" data-cat="certifications">
+          <div class="group-header">
+            <span class="group-icon">🔬</span>
+            <span class="group-title">Certifications & Quality</span>
+            <span class="group-count">4 questions</span>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">What certifications do your products carry?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Our products and farms hold the following certifications:</p>
+              <ul>
+                <li>🌿 USDA Organic (United States Department of Agriculture)</li>
+                <li>🏛️ FSSAI Certified (Food Safety and Standards Authority of India)</li>
+                <li>🧬 Non-GMO Project Verified</li>
+                <li>🌾 Gluten-Free Certified</li>
+                <li>🌱 Vegan Certified</li>
+                <li>♻️ Eco-packaging Certified</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Where can I see the lab test results for your products?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We believe in full transparency. Lab test certificates (COA – Certificate of Analysis) for each product batch are available on individual product pages under the "Certifications" tab. You can verify the batch number printed on your product packaging matches the COA online. If you can't find a specific report, email us and we'll send it directly.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Are your products tested for heavy metals and contaminants?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes, every batch is tested by accredited third-party laboratories for:</p>
+              <ul>
+                <li>Heavy metals (Lead, Cadmium, Arsenic, Mercury)</li>
+                <li>Microbial contamination (E. coli, Salmonella, etc.)</li>
+                <li>Pesticide residues (400+ compounds screened)</li>
+                <li>Aflatoxins and other mycotoxins</li>
+                <li>Nutritional potency verification</li>
+              </ul>
+              <p style="margin-top:8px;">All results are well within safe limits set by FSSAI and WHO guidelines.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+              <span class="accordion-q">Where are your farms located?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We source from 30+ certified organic farms across India, each selected for their soil quality, farming practices, and certification status. Key sourcing regions include:</p>
+              <ul>
+                <li>Moringa: Tamil Nadu & Andhra Pradesh</li>
+                <li>Turmeric: Erode (Tamil Nadu) & Odisha</li>
+                <li>Ashwagandha: Rajasthan & Madhya Pradesh</li>
+                <li>Amla: Uttar Pradesh & Himachal Pradesh</li>
+                <li>Spirulina: Dedicated bioreactors in Karnataka</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="no-results" id="no-results">
+          <div style="font-size:48px;margin-bottom:16px;">🔍</div>
+          <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;">No results found</h3>
+          <p style="color:var(--gray-600);margin-bottom:20px;">We couldn't find a match for your search. Try different keywords or contact us directly.</p>
+          <a href="contact.html" class="btn btn-primary">Ask Us Directly →</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="faq-cta">
+          <h3>Still have questions?</h3>
+          <p>Our friendly support team is available 6 days a week and always happy to help with anything.</p>
+          <div class="faq-cta-btns">
+            <a href="contact.html" class="btn btn-primary">📧 Send a Message</a>
+            <a href="https://wa.me/919876543210" class="btn btn-outline" target="_blank">💬 Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 Ahamla Organics. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a><a href="shop.html">Shop</a>
+        <a href="about.html">About</a><a href="contact.html">Contact</a><a href="track-order.html">Track Order</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem('ahamla_cart') || '[]');
+  document.getElementById('cart-count').textContent = cart.reduce((a,b)=>a+b.qty,0);
+
+  function toggleAccordion(btn) {
+    const item = btn.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  function setNavActive(link) {
+    setTimeout(() => {
+      document.querySelectorAll('.faq-nav a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    }, 50);
+  }
+
+  function filterCat(btn, cat) {
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('faq-search').value = '';
+    document.querySelectorAll('.faq-group').forEach(g => {
+      g.style.display = (cat === 'all' || g.dataset.cat === cat) ? '' : 'none';
+    });
+    document.querySelectorAll('.accordion-item').forEach(i => i.style.display = '');
+    document.getElementById('no-results').classList.remove('show');
+  }
+
+  function searchFAQ(query) {
+    const q = query.toLowerCase().trim();
+    let totalVisible = 0;
+
+    document.querySelectorAll('.faq-group').forEach(g => g.style.display = '');
+    document.querySelectorAll('.cat-pill').forEach((p,i) => p.classList.toggle('active', i===0));
+
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      const qText = item.querySelector('.accordion-q').textContent.toLowerCase();
+      const aText = item.querySelector('.accordion-body') ? item.querySelector('.accordion-body').textContent.toLowerCase() : '';
+      const match = !q || qText.includes(q) || aText.includes(q);
+      item.style.display = match ? '' : 'none';
+      if (match) totalVisible++;
+    });
+
+    document.querySelectorAll('.faq-group').forEach(g => {
+      const visible = [...g.querySelectorAll('.accordion-item')].filter(i => i.style.display !== 'none').length;
+      g.style.display = visible === 0 ? 'none' : '';
+    });
+
+    document.getElementById('no-results').classList.toggle('show', totalVisible === 0 && q.length > 0);
+  }
+
+  // Highlight active nav on scroll
+  const groups = document.querySelectorAll('.faq-group');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    groups.forEach(g => { if (window.scrollY >= g.offsetTop - 120) current = g.id; });
+    document.querySelectorAll('.faq-nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Auto-open from URL hash
+  const hash = window.location.hash.replace('#','');
+  if (hash) {
+    const target = document.getElementById(hash);
+    if (target) { setTimeout(() => target.scrollIntoView({behavior:'smooth'}), 300); }
+  }
+</script>
+</body>
+</html>

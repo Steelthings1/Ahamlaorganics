@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Organic Powders – Ahamla Organics</title>
+  <meta name="description" content="Browse our full range of certified organic powders — moringa, turmeric, ashwagandha, spirulina & more. Filter by category, price, and rating." />
+  <meta name="keywords" content="buy organic powder, moringa powder online, turmeric powder, buy ashwagandha, organic superfoods India" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.ahamlaorganics.com/shop.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Ahamla Organics Products",
+    "description": "Certified organic superfood powders"
+  }
+  </script>
+  <style>
+    :root {
+      --green: #2e7d52; --green-light: #4caf79; --green-dark: #1b5e35;
+      --blue: #1565c0; --white: #ffffff; --off-white: #f7faf8;
+      --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb;
+      --gray-300: #d1d5db; --gray-600: #4b5563; --gray-700: #374151; --gray-900: #111827;
+      --font: 'Segoe UI', system-ui, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08); --shadow: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.14); --radius: 12px; --transition: all .25s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--gray-900); background: var(--white); }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: var(--font); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 50px; font-size: 14px; font-weight: 600; border: 2px solid transparent; transition: var(--transition); }
+    .btn-primary { background: var(--green); color: var(--white); border-color: var(--green); }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-outline { background: transparent; color: var(--green); border-color: var(--green); }
+    .btn-outline:hover { background: var(--green); color: white; }
+
+    /* ANNOUNCEMENT */
+    .announcement { background: var(--green); color: white; text-align: center; padding: 10px; font-size: 14px; font-weight: 500; }
+    .announcement a { color: white; text-decoration: underline; }
+
+    /* HEADER */
+    header { background: white; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gray-200); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 40px; height: 40px; background: var(--green); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; }
+    .logo-text { font-size: 22px; font-weight: 800; color: var(--green-dark); }
+    .logo-text span { color: var(--blue); }
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a { padding: 8px 14px; border-radius: 8px; font-size: 15px; font-weight: 500; color: var(--gray-700); transition: var(--transition); }
+    nav a:hover, nav a.active { color: var(--green); background: #e8f5ee; }
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+    .icon-btn { width: 42px; height: 42px; border-radius: 10px; border: none; background: var(--gray-100); color: var(--gray-700); display: flex; align-items: center; justify-content: center; font-size: 18px; transition: var(--transition); position: relative; }
+    .icon-btn:hover { background: var(--green); color: white; }
+    .cart-count { position: absolute; top: 6px; right: 6px; width: 16px; height: 16px; background: var(--green); color: white; border-radius: 50%; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .menu-toggle { display: none; }
+
+    /* BREADCRUMB */
+    .breadcrumb { padding: 16px 0; border-bottom: 1px solid var(--gray-200); font-size: 14px; color: var(--gray-600); }
+    .breadcrumb a { color: var(--green); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* SHOP HERO */
+    .shop-hero { background: linear-gradient(135deg, #e8f5ee, #e3f0fd); padding: 48px 0; }
+    .shop-hero h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 900; color: var(--gray-900); margin-bottom: 12px; }
+    .shop-hero p { font-size: 17px; color: var(--gray-600); }
+    .shop-search { display: flex; gap: 12px; margin-top: 24px; max-width: 500px; }
+    .shop-search input { flex: 1; padding: 12px 20px; border-radius: 50px; border: 2px solid var(--gray-200); font-size: 15px; font-family: var(--font); outline: none; transition: var(--transition); }
+    .shop-search input:focus { border-color: var(--green); }
+
+    /* MAIN LAYOUT */
+    .shop-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 40px 0; }
+
+    /* SIDEBAR */
+    .sidebar { position: sticky; top: 88px; height: fit-content; }
+    .filter-panel { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; }
+    .filter-header { padding: 16px 20px; border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: space-between; }
+    .filter-header h3 { font-size: 15px; font-weight: 700; }
+    .filter-clear { font-size: 13px; color: var(--green); cursor: pointer; font-weight: 600; background: none; border: none; }
+    .filter-group { padding: 20px; border-bottom: 1px solid var(--gray-100); }
+    .filter-group-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--gray-600); margin-bottom: 14px; }
+    .filter-option { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; cursor: pointer; font-size: 14px; color: var(--gray-700); }
+    .filter-option input { width: 16px; height: 16px; accent-color: var(--green); }
+    .filter-option .count { margin-left: auto; font-size: 12px; color: var(--gray-600); background: var(--gray-100); padding: 2px 8px; border-radius: 50px; }
+    .price-range { padding: 0 4px; }
+    .price-inputs { display: flex; gap: 10px; margin-top: 12px; }
+    .price-inputs input { flex: 1; padding: 8px 12px; border: 1px solid var(--gray-200); border-radius: 8px; font-size: 14px; font-family: var(--font); width: 100%; }
+
+    /* PRODUCTS AREA */
+    .products-area {}
+    .toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+    .result-count { font-size: 15px; color: var(--gray-600); }
+    .result-count strong { color: var(--gray-900); }
+    .toolbar-right { display: flex; align-items: center; gap: 12px; }
+    .sort-select { padding: 8px 16px; border: 1px solid var(--gray-200); border-radius: 8px; font-size: 14px; font-family: var(--font); color: var(--gray-700); background: white; cursor: pointer; outline: none; }
+    .view-toggle { display: flex; gap: 4px; }
+    .view-btn { width: 36px; height: 36px; border: 1px solid var(--gray-200); border-radius: 8px; background: white; display: flex; align-items: center; justify-content: center; font-size: 16px; cursor: pointer; transition: var(--transition); }
+    .view-btn.active { background: var(--green); color: white; border-color: var(--green); }
+
+    /* ACTIVE FILTERS */
+    .active-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .active-filter-tag { display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: #e8f5ee; color: var(--green); border-radius: 50px; font-size: 13px; font-weight: 600; }
+    .active-filter-tag button { background: none; border: none; color: var(--green); font-size: 14px; cursor: pointer; padding: 0; line-height: 1; }
+
+    /* PRODUCT GRID */
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .product-card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); border: 1px solid var(--gray-200); }
+    .product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: var(--green-light); }
+    .product-img { background: linear-gradient(135deg, #d4edda, #cce5ff); height: 200px; display: flex; align-items: center; justify-content: center; font-size: 64px; position: relative; }
+    .product-tag { position: absolute; top: 10px; left: 10px; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 50px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .badge-green { background: #e8f5ee; color: var(--green); }
+    .badge-blue { background: #e3f0fd; color: var(--blue); }
+    .badge-red { background: #fdecea; color: #c62828; }
+    .product-wishlist { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,.9); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; cursor: pointer; transition: var(--transition); }
+    .product-wishlist:hover { background: var(--green); color: white; }
+    .product-info { padding: 16px; }
+    .product-category { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: .5px; }
+    .product-name { font-size: 15px; font-weight: 700; color: var(--gray-900); margin: 5px 0; line-height: 1.3; }
+    .product-weight { font-size: 13px; color: var(--gray-600); margin-bottom: 8px; }
+    .product-rating { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--gray-600); margin-bottom: 12px; }
+    .stars { color: #f59e0b; }
+    .product-footer { display: flex; align-items: center; justify-content: space-between; }
+    .product-price { font-size: 18px; font-weight: 800; color: var(--green-dark); }
+    .product-old-price { font-size: 13px; color: var(--gray-600); text-decoration: line-through; }
+    .add-cart-btn { width: 36px; height: 36px; background: var(--green); border: none; border-radius: 50%; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+    .add-cart-btn:hover { background: var(--green-dark); transform: scale(1.1); }
+
+    /* PAGINATION */
+    .pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 48px; }
+    .page-btn { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--gray-200); background: white; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; cursor: pointer; transition: var(--transition); }
+    .page-btn.active { background: var(--green); color: white; border-color: var(--green); }
+    .page-btn:hover:not(.active) { border-color: var(--green); color: var(--green); }
+
+    /* FOOTER */
+    footer { background: #111827; color: white; padding: 40px 0 24px; margin-top: 60px; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 14px; color: rgba(255,255,255,.5); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,.5); transition: var(--transition); }
+    .footer-links a:hover { color: var(--green-light); }
+
+    /* MOBILE NAV */
+    .mobile-nav { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 9998; }
+    .mobile-nav.open { display: block; }
+    .mobile-nav-panel { position: fixed; top: 0; right: 0; width: min(320px, 90vw); height: 100%; background: white; padding: 24px; overflow-y: auto; z-index: 9999; box-shadow: -4px 0 32px rgba(0,0,0,.15); }
+    .mobile-nav-panel a { display: block; padding: 14px 0; font-size: 16px; font-weight: 500; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); }
+    .mobile-nav-close { float: right; background: none; border: none; font-size: 24px; cursor: pointer; }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .menu-toggle { display: flex; }
+      .shop-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; display: none; }
+      .sidebar.open { display: block; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="announcement">🌿 Free shipping on orders above ₹999 &nbsp;|&nbsp; Use <strong>ORGANIC10</strong> for 10% off</div>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">Ahamla<span>Organics</span></div>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" title="Filter" onclick="document.querySelector('.sidebar').classList.toggle('open')" style="display:none" id="filter-btn">☰</button>
+        <a href="cart.html" class="icon-btn" title="Cart">🛒<span class="cart-count" id="cart-count">0</span></a>
+        <button class="icon-btn menu-toggle" onclick="document.getElementById('mobile-nav').classList.add('open')">☰</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" onclick="this.classList.remove('open')">
+  <div class="mobile-nav-panel" onclick="event.stopPropagation()">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('open')">✕</button>
+    <br/><br/>
+    <a href="index.html">Home</a><a href="shop.html">Shop</a>
+    <a href="about.html">About</a><a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a><a href="track-order.html">Track Order</a>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Home</a><span>›</span><strong>Shop</strong>
+  </div>
+</div>
+
+<!-- Shop Hero -->
+<section class="shop-hero">
+  <div class="container">
+    <h1>🌿 Organic Superfood Powders</h1>
+    <p>50+ certified organic products — pure, potent, and sustainably sourced.</p>
+    <div class="shop-search">
+      <input type="search" id="search-input" placeholder="Search products…" oninput="filterProducts()" />
+      <button class="btn btn-primary" onclick="filterProducts()">Search</button>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="shop-layout">
+
+    <!-- Sidebar Filters -->
+    <aside class="sidebar">
+      <div class="filter-panel">
+        <div class="filter-header">
+          <h3>🔧 Filters</h3>
+          <button class="filter-clear" onclick="clearFilters()">Clear All</button>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Category</div>
+          <label class="filter-option"><input type="checkbox" value="greens" onchange="filterProducts()"> Green Powders <span class="count">14</span></label>
+          <label class="filter-option"><input type="checkbox" value="herbs" onchange="filterProducts()"> Herbal Powders <span class="count">18</span></label>
+          <label class="filter-option"><input type="checkbox" value="roots" onchange="filterProducts()"> Root Powders <span class="count">11</span></label>
+          <label class="filter-option"><input type="checkbox" value="fruit" onchange="filterProducts()"> Fruit Powders <span class="count">9</span></label>
+          <label class="filter-option"><input type="checkbox" value="adaptogens" onchange="filterProducts()"> Adaptogens <span class="count">8</span></label>
+          <label class="filter-option"><input type="checkbox" value="immunity" onchange="filterProducts()"> Immunity Blends <span class="count">6</span></label>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Price Range (₹)</div>
+          <div class="price-range">
+            <input type="range" min="99" max="1499" value="1499" oninput="document.getElementById('max-price').value=this.value;filterProducts()" style="width:100%;accent-color:var(--green);" />
+            <div class="price-inputs">
+              <input type="number" placeholder="Min" value="99" id="min-price" oninput="filterProducts()" />
+              <input type="number" placeholder="Max" value="1499" id="max-price" oninput="filterProducts()" />
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Rating</div>
+          <label class="filter-option"><input type="radio" name="rating" value="4" onchange="filterProducts()"> ⭐⭐⭐⭐ & above</label>
+          <label class="filter-option"><input type="radio" name="rating" value="3" onchange="filterProducts()"> ⭐⭐⭐ & above</label>
+          <label class="filter-option"><input type="radio" name="rating" value="0" checked onchange="filterProducts()"> All Ratings</label>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Availability</div>
+          <label class="filter-option"><input type="checkbox" onchange="filterProducts()"> In Stock Only</label>
+          <label class="filter-option"><input type="checkbox" onchange="filterProducts()"> On Sale</label>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-group-title">Certifications</div>
+          <label class="filter-option"><input type="checkbox" checked onchange="filterProducts()"> USDA Organic</label>
+          <label class="filter-option"><input type="checkbox" checked onchange="filterProducts()"> FSSAI Certified</label>
+          <label class="filter-option"><input type="checkbox"> Non-GMO</label>
+          <label class="filter-option"><input type="checkbox"> Gluten Free</label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Products Area -->
+    <div class="products-area">
+      <div class="toolbar">
+        <div class="result-count">Showing <strong id="product-count">12</strong> products</div>
+        <div class="toolbar-right">
+          <select class="sort-select" onchange="sortProducts(this.value)">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+            <option value="newest">Newest</option>
+          </select>
+          <div class="view-toggle">
+            <button class="view-btn active" onclick="setView('grid', this)" title="Grid">⊞</button>
+            <button class="view-btn" onclick="setView('list', this)" title="List">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="active-filters" id="active-filters"></div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Products injected by JS -->
+      </div>
+
+      <div class="pagination">
+        <button class="page-btn">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">›</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 Ahamla Organics. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="track-order.html">Track Order</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Product Data
+  const allProducts = [
+    { id:1, name:'Moringa Leaf Powder', category:'greens', weight:'200g', emoji:'🌿', price:299, oldPrice:399, rating:4.9, reviews:312, tag:'Bestseller', tagColor:'green' },
+    { id:2, name:'Turmeric Root Powder', category:'roots', weight:'250g', emoji:'🌾', price:249, oldPrice:349, rating:4.8, reviews:198, tag:'New', tagColor:'blue' },
+    { id:3, name:'Ashwagandha Root Powder', category:'adaptogens', weight:'150g', emoji:'🍃', price:349, oldPrice:449, rating:4.7, reviews:245, tag:'', tagColor:'' },
+    { id:4, name:'Spirulina Powder', category:'greens', weight:'100g', emoji:'🌊', price:449, oldPrice:599, rating:4.9, reviews:167, tag:'Sale', tagColor:'red' },
+    { id:5, name:'Amla Berry Powder', category:'fruit', weight:'200g', emoji:'🫐', price:199, oldPrice:269, rating:4.8, reviews:421, tag:'Bestseller', tagColor:'green' },
+    { id:6, name:'Brahmi Leaf Powder', category:'herbs', weight:'100g', emoji:'🌸', price:279, oldPrice:349, rating:4.6, reviews:133, tag:'', tagColor:'' },
+    { id:7, name:'Maca Root Powder', category:'roots', weight:'150g', emoji:'🍠', price:499, oldPrice:649, rating:4.7, reviews:89, tag:'New', tagColor:'blue' },
+    { id:8, name:'Wheatgrass Powder', category:'greens', weight:'200g', emoji:'🌱', price:249, oldPrice:299, rating:4.5, reviews:210, tag:'', tagColor:'' },
+    { id:9, name:'Neem Leaf Powder', category:'herbs', weight:'100g', emoji:'🍀', price:149, oldPrice:199, rating:4.4, reviews:178, tag:'', tagColor:'' },
+    { id:10, name:'Shatavari Root Powder', category:'adaptogens', weight:'150g', emoji:'🌺', price:399, oldPrice:499, rating:4.8, reviews:156, tag:'', tagColor:'' },
+    { id:11, name:'Acai Berry Powder', category:'fruit', weight:'100g', emoji:'🍇', price:649, oldPrice:849, rating:4.9, reviews:94, tag:'Premium', tagColor:'blue' },
+    { id:12, name:'Immunity Blend Powder', category:'immunity', weight:'200g', emoji:'🛡️', price:549, oldPrice:699, rating:4.9, reviews:287, tag:'Bestseller', tagColor:'green' },
+  ];
+
+  let cart = JSON.parse(localStorage.getItem('ahamla_cart') || '[]');
+  let currentProducts = [...allProducts];
+
+  function updateCartCount() {
+    const count = cart.reduce((a, b) => a + b.qty, 0);
+    document.getElementById('cart-count').textContent = count;
+  }
+
+  function addToCart(name, price) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) existing.qty++;
+    else cart.push({ name, price, qty: 1 });
+    localStorage.setItem('ahamla_cart', JSON.stringify(cart));
+    updateCartCount();
+    showToast(`${name} added to cart! 🛒`);
+  }
+
+  function showToast(msg) {
+    const t = document.createElement('div');
+    t.style.cssText = 'position:fixed;bottom:24px;right:24px;background:#2e7d52;color:white;padding:14px 22px;border-radius:12px;font-weight:600;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.2)';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 3000);
+  }
+
+  function renderProducts(products) {
+    const grid = document.getElementById('products-grid');
+    document.getElementById('product-count').textContent = products.length;
+    grid.innerHTML = products.map(p => `
+      <div class="product-card">
+        <a href="product.html?id=${p.id}">
+          <div class="product-img" style="${p.category==='roots'?'background:linear-gradient(135deg,#fff3e0,#ffe0b2)':p.category==='adaptogens'?'background:linear-gradient(135deg,#e8eaf6,#c5cae9)':p.category==='fruit'?'background:linear-gradient(135deg,#fce4ec,#f8bbd0)':p.category==='herbs'?'background:linear-gradient(135deg,#f1f8e9,#dcedc8)':p.category==='immunity'?'background:linear-gradient(135deg,#e3f2fd,#bbdefb)':''}">
+            ${p.emoji}
+            ${p.tag ? `<span class="product-tag"><span class="badge badge-${p.tagColor==='green'?'green':p.tagColor==='blue'?'blue':'red'}">${p.tag}</span></span>` : ''}
+            <button class="product-wishlist" onclick="event.preventDefault();this.textContent=this.textContent==='♡'?'♥':'♡';this.style.color=this.textContent==='♥'?'#e53e3e':''">♡</button>
+          </div>
+        </a>
+        <div class="product-info">
+          <div class="product-category">${p.category.charAt(0).toUpperCase()+p.category.slice(1)}</div>
+          <a href="product.html?id=${p.id}"><div class="product-name">${p.name}</div></a>
+          <div class="product-weight">${p.weight}</div>
+          <div class="product-rating"><span class="stars">★★★★${p.rating>=4.8?'★':'☆'}</span> ${p.rating} (${p.reviews})</div>
+          <div class="product-footer">
+            <div>
+              <span class="product-price">₹${p.price}</span>
+              <div class="product-old-price">₹${p.oldPrice}</div>
+            </div>
+            <button class="add-cart-btn" onclick="addToCart('${p.name}', ${p.price})">+</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function filterProducts() {
+    const search = document.getElementById('search-input').value.toLowerCase();
+    const minP = parseInt(document.getElementById('min-price').value) || 0;
+    const maxP = parseInt(document.getElementById('max-price').value) || 9999;
+    const cats = [...document.querySelectorAll('.filter-option input[type=checkbox]')].filter(c => c.value && c.checked).map(c => c.value);
+    currentProducts = allProducts.filter(p => {
+      const matchSearch = !search || p.name.toLowerCase().includes(search) || p.category.toLowerCase().includes(search);
+      const matchPrice = p.price >= minP && p.price <= maxP;
+      const matchCat = cats.length === 0 || cats.includes(p.category);
+      return matchSearch && matchPrice && matchCat;
+    });
+    renderProducts(currentProducts);
+  }
+
+  function sortProducts(val) {
+    if (val === 'price-asc') currentProducts.sort((a,b) => a.price - b.price);
+    else if (val === 'price-desc') currentProducts.sort((a,b) => b.price - a.price);
+    else if (val === 'rating') currentProducts.sort((a,b) => b.rating - a.rating);
+    else currentProducts = [...allProducts];
+    renderProducts(currentProducts);
+  }
+
+  function clearFilters() {
+    document.querySelectorAll('.filter-option input').forEach(i => i.checked = false);
+    document.getElementById('search-input').value = '';
+    document.getElementById('min-price').value = 99;
+    document.getElementById('max-price').value = 1499;
+    currentProducts = [...allProducts];
+    renderProducts(currentProducts);
+  }
+
+  function setView(type, btn) {
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const grid = document.getElementById('products-grid');
+    if (type === 'list') {
+      grid.style.gridTemplateColumns = '1fr';
+    } else {
+      grid.style.gridTemplateColumns = '';
+    }
+  }
+
+  // Check URL params
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('cat')) {
+    const cat = urlParams.get('cat');
+    const catCheckbox = document.querySelector(`.filter-option input[value="${cat}"]`);
+    if (catCheckbox) { catCheckbox.checked = true; }
+  }
+  if (urlParams.get('search')) {
+    document.getElementById('search-input').value = urlParams.get('search');
+  }
+
+  renderProducts(allProducts);
+  filterProducts();
+  updateCartCount();
+
+  // Mobile filter button
+  if (window.innerWidth <= 768) {
+    document.getElementById('filter-btn').style.display = 'flex';
+  }
+</script>
+
+</body>
+</html>
