@@ -19,7 +19,7 @@
 // DEPENDENCIES
 // ============================================================================
 const express = require('express');
-const mongoose = require('mongoose');
+const { createClient } = require('@supabase/supabase-js');;
 const cors = require('cors');
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
@@ -40,7 +40,10 @@ dotenv.config();
 const app = express();
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const PORT = process.env.PORT || 5000;
-
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_KEY
+);
 // Validate required environment variables
 const requiredEnvVars = ['MONGODB_URI', 'SESSION_SECRET'];
 requiredEnvVars.forEach(envVar => {
